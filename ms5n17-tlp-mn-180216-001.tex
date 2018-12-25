@@ -45,9 +45,76 @@ Microfluidic NMR (Nuclear Magnetic Resonance) can probe chemical or bio-chemical
 %	\item No compromises are required in terms of sensitivity
 %	\item The incremental cost of an additional insert is very small (o(200 Euros))
 %\end{itemize}
-NMR (Nuclear Magnetic Resonance) is a well established technique used in chemical analysis~\cite{NMR-chemical-1995, hills1994magnetic, rabenstein1991quantitative}, metabolomics~\cite{nmr-metabolomics-future-2017,nmr-metabolomics-2016}, molecular structure determination~\cite{wuthrich1990protein}, reaction monitoring~\cite{maiwald2004quantitative} etc. Microfluidic lab-on-a-chip (LOC) devices are increasingly finding wide applications in chemistry and the life sciences~\cite{whitesides2006origins,mark2010microfluidic}. In addition to providing a way to integrate complex chemical and biochemical analytical processes with sample preparation and even culture of cells and other biological systems, they allow detailed control over growth conditions, and offer high experimental throughput~\cite{cellonchip-2006,cellonchip-review,tissueonchip-2008}. In spite of its analytical power, NMR is rarely used in microfluidic systems. In general, information on the system under study is extracted from microfluidic devices by spectroscopic techniques at the end point of the experiment using fluorescent probes which bind to one or a few analytes of interest. This approach can reach very high sensitivity, with limits of detection down to femtomolar concentrations. However, it is usually destructive, since the sample is affected by the addition of the marker, and can only be done once, at the end of the experiment. Following kinetic processes therefore requires using multiple samples. By contrast, NMR spectroscopy is non-invasive, generic (virtually all organic molecules give an NMR signal), and highly specific (no two metabolites share the same NMR spectrum). For these reasons, NMR spectroscopy could provide a useful complementary readout capability for microfluidic devices. For example, the metabolic activity of a cell culture sample can be followed non-invasively by NMR throughout the course of the experiment, while effects on cell differentiation can still be analysed by a (destructive) transcriptomic analysis at the end. Unfortunately, the sensitivity of NMR is much lower than that of optical techniques. The small volumes involved in microfluidic systems (typically in the range of 1 $\mu$l) compound this problem. Fortunately, the mass limit of detection of inductive NMR detectors tends to improve as they are scaled down~\cite{Olson1995}. On this basis, a number of different micro-NMR detector designs have been proposed and characterised in the literature~\cite{utz2012review,micronmr2014review}. In most cases, these are based on micro-solenoid~\cite{SUBRAMANIAN1998,Pines2007}, planar~\cite{Maguire2007,dieter2008,EHRMANN200}, or stripline coils~\cite{stripline_jan}. While significant research has gone into developing micro-NMR detectors for flow probes, only a few designs that allow insertion of a generic microfluidic device into the detector have been described.\par
-In this paper we present a novel modular probe designed for generic microfluidic-NMR experiments. The design is based on a transmission line detector~\cite{stripline_jan,gream_2016}, which is realised using inexpensive printed circuit board (PCB) technology. A modular design ensures that detectors of different geometry and size can be easily exchanged. The NMR detector (including the tuning and matching circuit) is connected to the probe skeleton through detachable connectors. Modularity of the probe not only allows fast optimisation of the detector but also different detectors optimised for different microfluidic device designs can be used on a single probe base. Using the same probe skeleton does not need any compromise of NMR sensitivity, resolution or microfluidic functionality. The cost of an additional detector is only $\sim$200 $\geneuro$ and can be manufactured within 2-3 days. The probe is designed for proton detected double resonance. The second channel can be tuned to different nuclei such as $^{13}$C, $^{15}$N, or $^{31}$P. The probe skeleton is designed entirely from easily obtainable raw materials such as aluminium profiles and tubes of standard size, with a small number of custom-machined parts holding the structure together. Detailed construction drawings for the probe are provided in the supporting information. Planar design of the detector allows to use planar exchangeable microfluidic devices. Microfluidic devices can be designed freely for specific experimental requirements as long as the overall shape of the device is maintained within l$\times$w$\times$t = 90mm$\times$20mm$\times$1mm.\par
-In the remainder of this paper, we discuss the probe design in more detail, and characterise its performance in terms of sensitivity and resolution. We also demonstrate its application in microfluidic cell culture, protein NMR spectroscopy, and micro-imaging. Using the same probe base does not require any compromise of NMR sensitivity, resolution or microfluidic functionality.
+NMR (Nuclear Magnetic Resonance) is a well established technique used in chemical 
+analysis~\cite{NMR-chemical-1995, hills1994magnetic, rabenstein1991quantitative}, 
+metabolomics~\cite{nmr-metabolomics-future-2017,nmr-metabolomics-2016}, molecular 
+structure determination~\cite{wuthrich1990protein}, reaction 
+monitoring~\cite{maiwald2004quantitative} etc. Microfluidic lab-on-a-chip (LOC) devices 
+are increasingly finding applications in chemistry and the life 
+sciences~\cite{whitesides2006origins,mark2010microfluidic}. 
+They provide a convenient way to integrate complex chemical and biochemical processes. 
+In particular, microfluidic technology allows detailed control over growth conditions 
+in the culture of cells, cell aggregates, and small organisms. 
+Lab-on-a-chip devices can also enable high experimental 
+throughput~\cite{cellonchip-2006,cellonchip-review,tissueonchip-2008}. 
+In spite of its analytical power, NMR has so far only rarely been used in microfluidic 
+systems. In general, information is extracted from microfluidic devices by spectroscopic 
+techniques at the end point of the experiment. Typically, 
+this is done using fluorescent probes, which bind to one or a few analytes of interest. 
+This approach can reach very high sensitivity, with limits of detection down to 
+femtomolar concentrations. However, it is usually destructive, since the sample is 
+affected by the addition of the marker, and can only be done once, at the end of the 
+experiment. Following kinetic processes therefore requires using multiple samples. By 
+contrast, NMR spectroscopy is non-invasive, generic (virtually all organic 
+molecules give an NMR signal), and highly specific (no two metabolites share 
+the same NMR spectrum). 
+
+NMR spectroscopy can provide a useful complementary readout capability 
+for microfluidic devices. For example, the metabolic activity of cell cultures 
+can be followed non-invasively by NMR throughout the course of the experiment, 
+while effects on cell differentiation can still be analysed by a (destructive) 
+transcriptomic analysis at the end. Unfortunately, the sensitivity 
+of NMR is much lower than that of optical techniques. 
+The small volumes involved in microfluidic systems
+ (typically in the range of 1~$\mu$l) 
+compound this problem. As is well known, the mass limit of detection of 
+inductive NMR detectors improves as they are scaled down~\cite{Olson1995}. 
+On this basis, a number of different micro-NMR detector designs have been 
+proposed and characterised in the literature~\cite{utz2012review,micronmr2014review}. 
+In most cases, these are based on micro-solenoid~\cite{SUBRAMANIAN1998,Pines2007}, 
+planar~\cite{Maguire2007,dieter2008,EHRMANN200}, or stripline 
+detectors~\cite{stripline_jan}. 
+Significant research has gone into developing micro-NMR detectors for flow probes, 
+where the sample container takes the form of a fixed capillary into which the sample
+must be injected. Only a few designs that allow insertion of a removable microfluidic 
+device into the detector have been described [REF Graeme, Spengler, Korvink et al].
+
+In this paper we present a novel modular probe designed for generic 
+microfluidic-NMR experiments. The design is based on a transmission line 
+detector~\cite{stripline_jan,gream_2016} using inexpensive 
+printed circuit board (PCB) technology. A modular design ensures that detectors of 
+different geometry and size can be easily exchanged. 
+The NMR detector (including the tuning and matching circuit) is connected to the probe 
+skeleton through detachable connectors. Modularity of the probe not only allows 
+fast optimisation of the detector but also facilitates the use of dedicated detectors 
+for different microfluidic devices on a single probe base. 
+Once thw probe base is in place, additional detectors can be manufactured 
+within 2-3 days for less than $\sim$200 $\geneuro$. 
+The probe is designed for proton detected double resonance. 
+The second channel can be tuned to different nuclei such as $^{13}$C, $^{15}$N, or 
+$^{31}$P. The probe skeleton is made almost entirely from easily obtainable raw materials 
+such as aluminium profiles of standard size, with only a small number of 
+custom-machined parts holding the structure together. 
+Detailed construction drawings for the probe are provided in the supporting 
+information, and a complete set of CAD files is available for download at [...].
+The planar geometry of the detector accommodates exchangeable microfluidic devices 
+which can be designed freely for specific experimental requirements as long as the 
+overall shape of the device is maintained. 
+
+In the remainder of this paper, we discuss the probe design in more detail, 
+and characterise its performance in terms of sensitivity and resolution. 
+We also demonstrate its application in microfluidic cell culture, 
+protein NMR spectroscopy, and micro-imaging. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Probe Design}
 \label{sec:probe-design}
@@ -71,16 +138,101 @@ In the remainder of this paper, we discuss the probe design in more detail, and 
 \caption{Micrograph of the probe with and without the sleeve.}
 \label{fig:probe} 
 \end{figure}
-The probe assembly design is based on readily and easily available materials and parts with minimal requirement for fabrication of customised parts to avoid any bottlenecks in the building process. The probe can be built from scratch with no requirement of any part or electronics from commercial NMR probes. All parts and electronic components are readily available from commercial sources, with the exception of a small number of precision-machined parts which are used to hold the assembly together. These can be ordered from commercial prototyping manufacturers or machined in-house if mechanical workshop facilities are available.\par
+The probe assembly design is based on readily and easily available materials and parts 
+with minimal need for fabrication of customised parts to avoid any bottlenecks in the 
+building process. The probe can be built from scratch with no requirement of any part 
+or electronics from commercial NMR probes. 
+All parts and electronic components are readily available from commercial sources, 
+with the exception of a small number of precision-machined parts which are used 
+to hold the assembly together. These can be ordered from commercial prototyping 
+manufacturers or machined in-house if mechanical workshop facilities are available.
+
 \begin{figure}
 \centering
 \includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
-\caption{Exploded view of he probe design (left) and assembled probe (right). Probe base (blue) and scaffold assembly (green) with base PCB (brown, 8) provides a generic mounting point for the NMR detector assembly(red). A microfluidic device (1) can be inserted from the top of the probe. The device is held in place by a spacer (4) between the detector planes (3 and 5) assuring alignment of the sample chamber with the constriction of the PCB planes. A modular PCB insert (6) can be exchanged to change the X channel frequency to $^{13}$C or $^{15}$N. Modular NMR detector is made up of parts 3 to 6 and is connected to the base plate PCB (8) through detachable SMP connectors. The scaffold assembly is made up of aluminium tubes (11), scaffold support disks (10) and, auxiliary support disks (12).}
+\caption{Exploded view of he probe design (left) and assembled probe (right). 
+Probe base (blue) and scaffold assembly (green) with base PCB (brown, 8) provides a 
+generic mounting point for the NMR detector assembly(red). 
+A microfluidic device (1) can be inserted from the top of the probe. 
+The device is held in place by a spacer (4) between the detector planes (3 and 5) 
+ensuring alignment of the sample chamber with the sensitive area on the PCB planes. 
+The X channel frequency is controlled by a 
+modular PCB insert (6). The modular NMR detector is made up of parts 3 to 6 and is 
+connected to the base plate PCB (8) through standard coaxial (SMP) connectors. 
+The scaffold assembly is made up of aluminium tubes (11), scaffold support disks (10) 
+and, auxiliary support disks (12).}
 \label{fig:probe-explode} 
 \end{figure}
-The probe assembly can be divided into three main assemblies: A) probe base; B) scaffold assembly; C) detector assembly(figure~\ref{fig:probe}). The  base (blue in figure~\ref{fig:probe-explode}) and the scaffold assembly (green in figure~\ref{fig:probe-explode}) together make the skeleton of the probe. Both the base and scaffold assembly are made from standard aluminium profiles. The base contains the BNC connectors for RF (Radio Frequency) input. These BNC connectors are connected to semi-rigid coaxial cables for RF transport in the probe.\par
-The scaffold assembly is made up of two hollow aluminium tubes (11) held together with precision machined parts (scaffold support disks (10)). The semi-rigid cables are threaded through these hollow aluminium tubes to reach the detector assembly . Additional auxiliary support disks (12) made from 5 mm poly (methyl methacrylate) (PMMA) are used for better stability of the scaffold assembly. A tuning and matching PCB (8) is put on the top of the probe skeleton held with the detector support rods (9) and semi-rigid coaxial cables. Both conductors of the coaxial cables are connected to the tuning and matching PCB. The tuning and matching PCB holds capacitors (7) for secondary tuning and matching of the detector and low-loss SMP connectors (14 in figure~\ref{fig:ProbePhoto}) to connect the detector assembly. Secondary tuning and matching capacitors are used for fine tuning and matching of a detector at the magnet through tuning rods(13). The tuning and matching PCB provides a mechanical connection between capacitors (7) and tuning rods (13) such that the detectors tuned to very different frequencies (100s of MHz apart) can be exchanged freely on the same probe skeleton without disturbing the tuning and matching circuit. The base, the scaffold assembly and, the tuning and matching PCB all have a free circular axial bore providing access from the bottom of the probe. A free access from the bottom can be used for temperature and environmental control inside the probe.\par
-The NMR detector is made up of two PCBs (3 and 5), a spacer between them (4) and an RF-insert (6). The detector is based on a planar transmission line geometry as described before~\cite{gream_2016,stripline_jan}. In this geometry the detector is made from a planar copper strip. The width of the copper strip is larger at the ends and smaller in the middle making a constriction. Due to smaller width at the constriction the current density and hence the sensitivity increases. Both the PCBs (3 and 5) have the constriction geometry  and also carry the circuit electronics for the channel separation and primary tuning and matching of the detector. A copper or brass auxiliary disk (2) holds the PCBs together. The probe sheath (not shown here) is connected to the auxiliary disk (2) and the scaffold assembly through screws. An exchangeable microfluidic device (1) can be inserted from the top of the detector. A microfluidic device can be filled with a sample before putting it in the probe or the device can be put in the probe with some fluidic connectors attached to fill or exchange the sample in-situ. The microfluidic device sits on the spacer between the two PCB planes coinciding the sample chamber with the constriction on the detector.  RF-insert (6) can be exchanged to tune and match the probe to different frequencies at X channel. As the detector is connected to the probe base through detachable connectors, various detectors can be used on the same probe skeleton. The detectors are fabricated from easily accessible PCB materials. Use of PCB to manufacture the detector allows for easy optimisation of detector dimensions for several applications compared to other manufacturing methods. Example of different detectors can be detectors tuned to different resonance frequencies or detectors with customised constriction geometries for different microfluidic devices.\par
+
+The probe is composed of three main assemblies: A) probe base; B) scaffold assembly; 
+C) detector assembly (figure~\ref{fig:probe}). 
+The  base (blue in figure~\ref{fig:probe-explode}) and the scaffold assembly 
+(green in figure~\ref{fig:probe-explode}) together make the skeleton of the probe. 
+Both the base and scaffold assembly are made from standard aluminium profiles. 
+The base contains the BNC connectors for RF (Radio Frequency) input. 
+These BNC connectors are connected to semi-rigid coaxial cables for 
+RF transport in the probe.
+
+The scaffold assembly is made up of two hollow aluminium tubes (11) held together with 
+precision machined parts at either end(scaffold support disks (10)). 
+The semi-rigid cables are  threaded through these hollow aluminium tubes 
+to reach the detector assembly. 
+Auxiliary support disks (12) provide additional rigidity for the scaffold assembly. 
+In our case, these were laser cut from 5~mm thick PMMA sheets, 
+but they may also be made by conventional machining.
+A tuning and matching PCB (TMPCB, 8) is held in place on the top of the probe skeleton by
+the detector support rods (9), with the semi-rigid coaxial cables providing
+additional support.
+The TMPCB is permantly fixed to the probe base, and serves as attachment point
+for the exchangeable detector assembly. It also provides 
+capacitors (7) for secondary tuning and matching.
+The detector assembly is connected to through a pair of
+low-loss SMP connectors (14 in figure~\ref{fig:ProbePhoto}).
+While each detector assembly is roughly
+tuned and matched with fixed circuit elements soldered onto it,
+the adjustable capacitors on the TMPCB are used for 
+fine tuning and matching 
+at the magnet through tuning rods (13) which reach all the way to the probe base. 
+
+The base, the scaffold assembly and the tuning and matching PCB all have a free circular 
+axial bore providing access from the bottom of the probe, which can be used for 
+temperature and environmental control and/or fluidic connections to the sample as
+needed.
+The detector assembly is made up of two PCBs (3 and 5), a spacer between them (4) and an 
+RF-insert (6). The detector used here is based on a planar transmission line geometry 
+as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
+coils and Helmholtz pairs are also possible, and can easily be realised on a PCB.
+The transmission line detector consists of a pair of copper 
+planes each with a constriction at the centre.  This geometry gives rise to an 
+electromagnetic eigenmode with a strong anti-node of the magetic field between
+the two planes at the site of the constriction. This concentrates the rf field 
+and the detection snsitivity
+onto the sample area. 
+The shape and size of the copper structures have been chosen such as to produce
+an eigenfrequency of this mode around 630~MHz. The PCBs have been designed with
+solder points at the back side for chip capacitors; these can be used to tune the
+resonance to the desired proton Larmor frequency (500 or 600~MHz in the present case).
+Both the PCBs (3 and 5) also carry circuitry for the channel separation and primary 
+tuning and matching of the detector. A copper or brass auxiliary disk (2) holds the PCBs 
+together. 
+The probe sheath (not shown here) is connected to the auxiliary disk (2) 
+and the scaffold assembly through screws. 
+An exchangeable microfluidic device (1) can be inserted from the top of the detector. 
+Microfluidic devices can be used as passive sample holders, filled before putting them
+into the probe,
+or the device can be actively perfused and operated in-situ, with fluidic connections 
+attached inside the magnet. The microfluidic device is held in place by the spacer 
+between the two PCB planes coinciding the sample chamber with the constriction on the 
+detector.  The 45-degree edges of the device outline help with precise and reliable
+alignment. 
+
+The RF-insert (6) can be exchanged to tune and match the probe to different frequencies 
+at the X channel. As the detector is connected to the probe base through detachable 
+connectors, various detectors can be used on the same probe skeleton. 
+Using standard PCB processes to manufacture the detector provides great flexibility
+to optimise detector performance for different applications, including different
+microfluidic sample sizes, and different combinations of target nuclei.
+\par
 \begin{figure}
 \centering
 \includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-both-detectors.png}
