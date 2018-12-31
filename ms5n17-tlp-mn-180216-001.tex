@@ -353,7 +353,6 @@ for 2 hours before imaging.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results and Discussion}
-The spectra in \fig{fig:lineshape} and \fig{fig:media-spec} were obtained with water presaturation followed by a 90$^{\circ}$ pulse. Spectrum in figure~\ref{fig:15N-nutation} was acquired using pulse sequence described in~\cite{bax_indirect}.
 
 %\begin{itemize}
 %	\item Tuning/matching/channel separation
@@ -393,7 +392,7 @@ frequencies as the channel separation is better than 15 decibels at all frequenc
 \label{fig:tandm} 
 \end{figure}
 
-Initially FR4 PCB material was used for the detector assembly because of its low cost and easy availability. 
+Initially, FR4 PCB material was used for the detector assembly because of its low cost and easy availability. 
 B$_0$ field maps of the sample chamber obtained from gradient echo images using these detectors 
 showed inhomogeneities in the B$_0$ field due to the glass fibre rovings in FR4's composite backing (not shown).
 To avoid these inhomogeneities and therefore to achieve better resolution, 
@@ -411,7 +410,7 @@ the value of 22 kHz/$\sqrt{W}$ that has been reported by Finch et al.\todo{REF} 
 of half this size at a Larmor frequency of 300~MHz. 
 
 The probe is not sensitive enough to make direct detection of $^{15}$N signals practical. Nutation at the
-$^{15}$N frequency was therefore detected indirectly using coherence transfer to protons. 
+$^{15}$N frequency was therefore detected indirectly using coherence transfer to protons \cite{bax_indirect}. 
 \fig{fig:15N-nutation} shows the results. Using 100~W of input power \todo{verify power setting} 
 produces nutation frequencies of 6 kHz for $^{15}$N and 14 kHz for $^{13}$C. 
 No signs of arcing were obseved at this power level for pulses up to 1~ms duration.
@@ -455,20 +454,43 @@ complex mixtures. The proton spectrum of DMEM (Dulbecco modified Eagle's medium)
 scans in 20 mins is shown in figure~\ref{fig:media-spec}. This demonstrates the suitability of this probe 
 for metabolomic studies of microfluidic cultures of cells, tissues, and small organisms. 
 
-Figure~\ref{fig:HSQC} shows the possibility of useful double resonance experiments in the current setup. On left, $^{13}$C-$^{1}$H-HSQC spectrum, acquired in 12 mins (32 t$_1$ increments and 16 scans) from 2.5 $\mu$l sample of 100 mM $^{13}$C-glucose dissolved in water. On right, $^{15}$N-$^{1}$H-HSQC spectrum, acquired in 400 mins (64 t$_1$ increments and 128 scans) from 2.5 $\mu$l sample of 1 mM $^{15}$N-ubiquitin (17 $\mu$g) dissolved in a buffer solution. $^{15}$N is a very insensitive nuclei hence very difficult to detect. $^{15}$N-$^{1}$H-HSQC spectrum on 1 mM of protein sample clearly shows that the current probe can be used for protein structure studies with minimal amount of isotopically labeled protein.\par
+Figure~\ref{fig:HSQC} demonstrates proton-detected double resonance experiments in the current setup. 
+The left panel shows a $^{13}$C-$^{1}$H heteronuclear single quantum correlation (HSQC) spectrum, acquired in 12 mins 
+(32 t$_1$ increments and 16 scans) 
+from a 2.5 $\mu$l sample of 100 mM u-$^{13}$C-glucose dissolved in water. The right panel shows a 
+$^{15}$N-$^{1}$H-HSQC spectrum, acquired in 400 mins (64 t$_1$ increments and 128 scans) 
+from 2.5 $\mu$l sample of 1 mM $^{15}$N-ubiquitin (17 $\mu$g) dissolved in 10 mM phosphate buffer at pH 7. 
+All expected cross peaks are present in the spectrum. The ability to obtain meaningful  \textsuperscript{1}H-
+\textsuperscript{15}N correlation spectra from such small samples could prove very useful in the context of
+proteins that are difficult to express and therefore only available in small quantities. The integration of
+protein NMR and microfluidic technology also opens new possibilities for high-throughput kinetics and 
+binding studies. 
+
 \begin{figure}
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/media-180125-005-bigger-font.png} 
 \caption{Spectrum of culture growth media recorded in 256 scans with water presaturation. The total experimental time was 20 min for 2.5 $\mu$l sample volume.}
 \label{fig:media-spec} 
 \end{figure}
+
 \begin{figure}
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-sp-180612-HSQCspect.png} 
-\caption{$^1$H-$^{13}$C HSQC spectrum of $^{13}$C labeled glucose (left) and $^1$H-$^{15}$N HSQC of $^{15}$N labeled Ubiquitin (right) both acquired from 2.5$\mu$l sample volume at 14 T. Glucose HSQC spectrum was acquired in 12 minutes from a 100 mM sample. Ubiquitin HSQC spectrum was acquired in 400 minutes from a 1 mM sample.}
+\caption{ $^1$H-$^{13}$C HSQC spectrum of $^{13}$C labeled glucose (left) and $^1$H-$^{15}$N HSQC of $^{15}$N labeled Ubiquitin (right) both acquired from 2.5$\mu$l sample volume at 14 T. Glucose HSQC spectrum was acquired in 12 minutes from a 100 mM sample. Ubiquitin HSQC spectrum was acquired in 400 minutes from a 1 mM sample.}
 \label{fig:HSQC} 
 \end{figure}
-The probe has been used to make micro MR (magnetic resonance) images using a Bruker imaging unit. Figure~\ref{fig:tisli} shows MR images of mouse liver tissue slice immersed in DMEM cell growth media acquired by putting the slices in a microfluidic device with circular sample chamber to accommodate the slice. The acquisition times for MR images were 1 minute, 25 minutes and 8 minutes for gradient echo, spin echo and RARE 8 (rapid acquisition with relaxation enhancement) respectively. Though the commercial imaging unit is optimised for bigger sample size (30 mm inner diameter max), images with in-plane resolution of 30 ($\mu$m)$^{2}$ are recorded for a 3 mm liver slice of thickness 300~$\mu$m. Here we have presented preliminary results of imaging experiments. In future we aim to include a dedicated micro-imaging setup for better resolution to make metabolic profile maps by diffusion tensor imaging.\par
+
+The probe can also be used to make micro MR (magnetic resonance) images using a Bruker micro-gradient  unit. 
+To this effect, the aluminium probe sleeve must be replaced by an electrically insulating material in order to 
+avoid image distortions due to eddy currents in the sleeve. 
+Figure~\ref{fig:tisli} shows MR images of mouse liver tissue slice 
+immersed in DMEM cell growth medium.
+The slice was placed in a microfluidic device with circular sample chamber centred at the detector location, as 
+shown in \fig{fig:tisli}A. 
+The image shown in \fig{fig:tisli}B was acquired using a gradient echo (FLASH) pulse sequence with repetion time
+$t_R=120$~ms and echo time $t_E=12$~ms \todo{verify all values}
+The acquisition times for MR images were 1 minute, 25 minutes and 8 minutes for gradient echo, spin echo and RARE 8 (rapid acquisition with relaxation enhancement) respectively. Though the commercial imaging unit is optimised for bigger sample size (30 mm inner diameter max), images with in-plane resolution of 30 ($\mu$m)$^{2}$ are recorded for a 3 mm liver slice of thickness 300~$\mu$m. Here we have presented preliminary results of imaging experiments. In future we aim to include a dedicated micro-imaging setup for better resolution to make metabolic profile maps by diffusion tensor imaging.
+
 \begin{figure}
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tisli-im-180511.png} 
