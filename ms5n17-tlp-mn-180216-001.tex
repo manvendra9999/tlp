@@ -139,7 +139,7 @@ protein NMR spectroscopy, and micro-imaging.
 \begin{figure}
 \centering
 \includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181218-probe.png} 
-\caption{Micrograph of the probe with and without the sleeve.}
+\caption{The probe with and without sleeve.}
 \label{fig:probe} 
 \end{figure}
 The probe assembly design is based on readily and easily available materials and parts 
@@ -293,7 +293,10 @@ could be achieved without $L_1$.
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
 \caption{Circuit diagram of the double resonance probe. 
-Proton frequency is fed in from the left (port 2) and X frequency is fed in from right (port 7).}
+Proton frequency is fed in from the left (port 2) and X frequency is fed in from right (port 7).
+\todo{modify figure to represent connections to detector structure properly, and include PCB microstrip
+transmission line}
+}
 \label{fig:circuit}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -425,7 +428,9 @@ No signs of arcing were obseved at this power level for pulses up to 1~ms durati
 \begin{figure}
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-sp-150218-15-Nnutation-171215-003.png} 
-\caption{$^{15}$N nutation detected on proton of $^{15}$N-urea dissolved in water acquired at 14 T corresponding to 60 MHz frequency. A radio-frequency field of 6~kHz can be generated at 60~MHz.}
+\caption{$^{15}$N nutation detected on proton of $^{15}$N-urea dissolved in water acquired at 14 T corresponding to 60 MHz frequency. A radio-frequency field of 6~kHz can be generated at 60~MHz.
+\todo{fix typo in the x-axis label}
+}
 \label{fig:15N-nutation} 
 \end{figure}
 
@@ -479,17 +484,29 @@ binding studies.
 \caption{ $^1$H-$^{13}$C HSQC spectrum of $^{13}$C labeled glucose (left) and $^1$H-$^{15}$N HSQC of $^{15}$N labeled Ubiquitin (right) both acquired from 2.5$\mu$l sample volume at 14 T. Glucose HSQC spectrum was acquired in 12 minutes from a 100 mM sample. Ubiquitin HSQC spectrum was acquired in 400 minutes from a 1 mM sample.}
 \label{fig:HSQC} 
 \end{figure}
-
-The probe can also be used to make micro MR (magnetic resonance) images using a Bruker micro-gradient  unit. 
+%$ 
+The probe can also be used to acquire micro magnetic resonance (MR) images using a Bruker micro-gradient unit. 
 To this effect, the aluminium probe sleeve must be replaced by an electrically insulating material in order to 
 avoid image distortions due to eddy currents in the sleeve. 
-Figure~\ref{fig:tisli} shows MR images of mouse liver tissue slice 
+\fig{fig:tisli} shows MR images of mouse liver tissue slice 
 immersed in DMEM cell growth medium.
 The slice was placed in a microfluidic device with circular sample chamber centred at the detector location, as 
 shown in \fig{fig:tisli}A. 
 The image shown in \fig{fig:tisli}B was acquired using a gradient echo (FLASH) pulse sequence with repetion time
-$t_R=120$~ms and echo time $t_E=12$~ms \todo{verify all values}
-The acquisition times for MR images were 1 minute, 25 minutes and 8 minutes for gradient echo, spin echo and RARE 8 (rapid acquisition with relaxation enhancement) respectively. Though the commercial imaging unit is optimised for bigger sample size (30 mm inner diameter max), images with in-plane resolution of 30 ($\mu$m)$^{2}$ are recorded for a 3 mm liver slice of thickness 300~$\mu$m. Here we have presented preliminary results of imaging experiments. In future we aim to include a dedicated micro-imaging setup for better resolution to make metabolic profile maps by diffusion tensor imaging.
+$t_R=120$~ms and echo time $t_E=12$~ms \todo{verify all values}. The slice thickness of  1~mm encompasses the entire thickness of the tissue; the 
+lateral dimensions of all MR images in \fig{fig:tisli} are 512$\times$512 pixels
+at a resolution of 30~$\mu$m.
+\fig{fig:tisli}C shows a $B_0$ field map, which has been obtained by acquiring
+two separate FLASH images with echo times $t_E=6$~ms and 12~ms, respectively.
+The brightness of each pixel is prootional to the sum of the magnitude of
+the two images, whereas the colour encode the phase difference bewteen them.
+The full colour range from red to blue spans phase differences from $-\pi$ to
+$+\pi$, corresponding to local field variations of $\Delta B/B_0=...$ 
+\todo{compute value and insert here}.
+A spin echo image is shown in \fig{fig:tisli}D, acquired over 25~min. Finally,
+\fig{fig:tisli}E shows a RARE image using the same parameters, with 8 echos
+acquired per scan, thus reducing the acquisition time to 8 minutes.
+
 
 \begin{figure}
 \centering
@@ -497,12 +514,45 @@ The acquisition times for MR images were 1 minute, 25 minutes and 8 minutes for 
 \caption{MR images of a freshly cut live slice from a mouse. A: optical micrograph; B: Gradient echo image acquired in 1 minute; C: magnetic field map; D Spin echo image acquired in 30 minutes; E: RARE8 image acquired in 8 minutes.}
 \label{fig:tisli} 
 \end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
-We have presented a novel modular NMR probe assembly for generic high sensitivity microfluidic NMR experiments. The probe is built from the readily accessible materials with no requirement of parts from commercial probes. The modularity of the probe enables to use different detectors tailored for specific experimental requirements on the same probe skeleton. The detector is made from easily available PCB materials. The use of PCB allows to modify the probe circuit and design without disturbing the probe geometry. The probe has excellent B$_1$ homogeneity and sensitivity. The resolution is reasonable for primary metabolic studies but needs to be improved for generic applications. The probe has already been used for various diverse experiments like reaction monitoring, protein structure determination, micro-imaging of mouse liver tissue slices, metabolic studies of mammalian cells, hyperpolarisation on the chip etc. Although in the current form the probe can be used for generic 2D experiments, in the future we intend to include extra channels for lock and pulses on other nuclei. Though, commercial gradient system has been successful to make micro images of mouse liver tissue slices, a dedicated gradient system can be included on the probe PCB for shimming and imaging.
+We have presented a novel modular NMR probe assembly for generic high 
+sensitivity microfluidic NMR experiments. 
+The probe is built from the readily accessible materials, using only a minimum
+of custom-made parts. 
+The modularity of the probe enables to use different detectors 
+tailored for specific experimental requirements on the same probe skeleton. 
+The detector itself is made from easily available PCB materials. 
+The use of PCB technology offers great flexibility, snd allows to modify the 
+probe circuit and design without affecting the probe geometry. 
+The probe has excellent B$_1$ homogeneity and its sensitivity is in line with
+the best performances that have been reported in this range of probe volumes.
+
+Using simple microfluidic devices made from PMMA sheets by laser cutting,
+spectral resolution around 0.005~ppm is achieved in proton spectra at 
+600~MHz. This is sufficient for primary metabolic studies, but some
+applications could benefit from better resolution. The probe has already been 
+used for various  experiments including reaction monitoring  \todo{REF}, 
+micro-imaging of mouse liver tissue slices, and metabolic studies of 
+mammalian cells. The probe is designed for double resonance, and
+acqusition of proton-detected heteronuclear correlation experiments
+has been demonstrated for small molecules as well as proteins. 
+In the future we intend to add a field-frequency lock channel,
+as well as additional functionality to control sample temperature, 
+as well as advanced microfluidic perfusion and flow control.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgement}
-This research was funded through "Future and Emerging Technologies" (FETOPEN) call of the EU Horizon 2020 research framework. Authors would like to thank William Hale and Bishnubrata Patra for making microfluidic devices and Dr. Katrin Deinhardt from Department of Biological Science at UoS, for the mouse liver tissue..
+This research was supported by the "TISuMR" project,
+funded through "Future and Emerging Technologies" (FETOPEN) 
+call of the EU Horizon 2020 research framework. The authors would like to 
+thank Mr.~William Hale and Dr.~Bishnubrata Patra for help with
+making microfluidic devices, Dr.~Katrin Deinhardt for providing 
+the mouse liver tissue, and Dr.~Jörn Werner for providing the 
+labelled ubiquitin sample and for his support in the acquisition
+and processing of the HSQC spectrum.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \bibliographystyle{unsrt}
