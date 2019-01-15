@@ -1,5 +1,5 @@
-\documentclass[preprint,12pt]{article}
-\usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,authblk,lineno}
+\documentclass[preprint,5p]{elsarticle}
+\usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,lineno}
 %\linenumbers
 \hypersetup{
     colorlinks=true,        % false: boxed links; true: colored links
@@ -18,19 +18,19 @@
 \title{Modular transmission line probes for microfluidic nuclear magnetic resonance spectroscopy and imaging}
 \author[1]{Manvendra Sharma}
 \author[1]{Marcel Utz}
-\affil[1]{School of Chemistry, University of Southampton, Southampton SO17 1BJ, United Kingdom}
-\date{\today}
-\setcounter{Maxaffil}{0}
-\renewcommand\Affilfont{\itshape\footnotesize}
-\maketitle
-\clearpage
+\address[1]{School of Chemistry, University of Southampton, Southampton SO17 1BJ, United Kingdom}
+%\date{\today}
+%\setcounter{Maxaffil}{0}
+%\renewcommand\Affilfont{\itshape\footnotesize}
+%\maketitle
+%\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Microfluidic NMR (Nuclear Magnetic Resonance) can probe chemical or bio-chemical reactions, including the metabolism of cells, and tissues non-invasively in a tightly controlled and tailored microfluidic environment. We present a dual-channel modular probe assembly for  high efficiency microfluidic-NMR. The samples are contained in exchangeable, flow compatible planar microfluidic devices. The detector including the tuning and matching circuitry of the probe is modular and allows the use of different detectors optimised for different experimental conditions on the same probe base. The complete probe can be built from easily available parts. The probe body is made from prefabricated aluminium profiles and few precision machined parts, while the probe circuit and detector are made from PCB (printed circuit board) materials. The probe has a limit of detection of 1.18 nmol s$^{-1/2}$, resolution of 3.35 Hz and, excellent B$_{1}$ homogeneity. The probe is optimised for proton detection and can be tuned and matched simultaneously to proton and X channel ($^{13}$C or $^{15}$N) frequencies. We have successfully acquired $^1$H-$^{13}$C and $^1$H-$^{15}$N heteronuclear correlation spectrum (HSQC). Particularly, $^1$H-$^{15}$N HSQC spectrum of 1 mM $^{15}$N labeled ubiquitin from 2.5 $\mu$l of sample volume.
+Microfluidic NMR (Nuclear Magnetic Resonance) can probe chemical or bio-chemical reactions, including the metabolism of cells, and tissues non-invasively in a tightly controlled and tailored microfluidic environment. We present a dual-channel modular probe assembly for  high efficiency microfluidic-NMR. The samples are contained in exchangeable, flow compatible planar microfluidic devices. The detector including the tuning and matching circuitry of the probe is modular and allows the use of different detectors optimised for different experimental conditions on the same probe base. The complete probe can be built from easily available parts. The probe body is made from prefabricated aluminium profiles and few precision machined parts, while the probe circuit and detector are made from PCB (printed circuit board) materials. The probe has a limit of detection of 1.18 nmol s$^{-1/2}$, resolution of 3.35 Hz and, excellent B$_{1}$ homogeneity. The probe is optimised for proton detection and can be tuned and matched simultaneously to proton and X channel (\textsuperscript{13}C or \textsuperscript{15}N) frequencies. We have successfully acquired \textsuperscript{1}H-\textsuperscript{13}C and \textsuperscript{1}H-\textsuperscript{15}N heteronuclear correlation spectrum (HSQC). Particularly, \textsuperscript{1}H-\textsuperscript{15}N HSQC spectrum of 1 mM \textsuperscript{15}N labeled ubiquitin from 2.5 $\mu$l of sample volume.
 \end{abstract}
 \maketitle
-\clearpage
+%\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}	
 \label{sec:intro}
@@ -50,9 +50,8 @@ Microfluidic NMR (Nuclear Magnetic Resonance) can probe chemical or bio-chemical
 %	\item The incremental cost of an additional insert is very small (o(200 Euros))
 %\end{itemize}
 NMR (Nuclear Magnetic Resonance) is a well established technique used in chemical 
-analysis~\cite{NMR-chemical-1995, hills1994magnetic, rabenstein1991quantitative}, 
-metabolomics~\cite{nmr-metabolomics-future-2017,nmr-metabolomics-2016}, molecular 
-structure determination~\cite{wuthrich1990protein}, reaction 
+analysis~\cite{NMR-chemical-1995, hills1994magnetic, rabenstein1991quantitative},
+molecular structure determination~\cite{wuthrich1990protein}, metabolomics~\cite{nmr-metabolomics-future-2017,nmr-metabolomics-2016}, reaction 
 monitoring~\cite{maiwald2004quantitative} etc. Microfluidic lab-on-a-chip (LOC) devices 
 are increasingly finding applications in chemistry and the life 
 sciences~\cite{whitesides2006origins,mark2010microfluidic}. 
@@ -71,7 +70,7 @@ affected by the addition of the marker, and can only be done once, at the end of
 experiment. Following kinetic processes therefore requires using multiple samples. By 
 contrast, NMR spectroscopy is non-invasive, generic (virtually all organic 
 molecules give an NMR signal), and highly specific (no two metabolites share 
-the same NMR spectrum). 
+the same NMR spectrum).
 
 NMR spectroscopy can provide a useful complementary readout capability 
 for microfluidic devices. For example, the metabolic activity of cell cultures 
@@ -91,7 +90,7 @@ detectors~\cite{stripline_jan}.
 Significant research has gone into developing micro-NMR detectors for flow probes, 
 where the sample container takes the form of a fixed capillary into which the sample
 must be injected. Only a few designs that allow insertion of a removable microfluidic 
-device into the detector have been described \todo{REF Graeme, Spengler, Korvink et al}.
+device into the detector have been described~\cite{Spengler-2014,Spengler-2016,gream_2016}.
 
 In this paper we present a novel modular probe designed for generic 
 microfluidic-NMR experiments. The design is based on a transmission line 
@@ -151,7 +150,7 @@ manufacturers or machined in-house if mechanical workshop facilities are availab
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
+\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
 \caption{Exploded view of he probe design (left) and assembled probe (right). 
 Probe base (blue) and scaffold assembly (green) with base PCB (brown, 8) provides a 
 generic mounting point for the NMR detector assembly(red). 
@@ -167,9 +166,9 @@ and, auxiliary support disks (12).}
 \end{figure}
 
 The probe is composed of three main assemblies: A) probe base; B) scaffold assembly; 
-C) detector assembly (figure~\ref{fig:probe}). 
-The  base (blue in figure~\ref{fig:probe-explode}) and the scaffold assembly 
-(green in figure~\ref{fig:probe-explode}) together make the skeleton of the probe. 
+C) detector assembly (\fig{fig:probe}). 
+The  base (blue in \fig{fig:probe-explode}) and the scaffold assembly 
+(green in \fig{fig:probe-explode}) together make the skeleton of the probe. 
 Both the base and scaffold assembly are made from standard aluminium profiles. 
 The base contains the BNC connectors for RF (Radio Frequency) input. 
 These BNC connectors are connected to semi-rigid coaxial cables for 
@@ -189,7 +188,7 @@ The TMPCB is permantly fixed to the probe base, and serves as attachment point
 for the exchangeable detector assembly. It also provides 
 capacitors (7) for secondary tuning and matching.
 The detector assembly is connected to through a pair of
-low-loss SMP connectors (14 in figure~\ref{fig:ProbePhoto}).
+low-loss SMP connectors (14 in \fig{fig:ProbePhoto}).
 While each detector assembly is roughly
 tuned and matched with fixed circuit elements soldered onto it,
 the adjustable capacitors on the TMPCB are used for 
@@ -242,7 +241,7 @@ PCB itself making it compact (38 mm O.D.). Detachable SMP connectors (14) are us
 connect the RF insert (6) and the detector assembly. }
 \label{fig:ProbePhoto}
 \end{figure}
-Figure~\ref{fig:ProbePhoto} shows two different versions of the probe with and without the RF insert (6) 
+\fig{fig:ProbePhoto} shows two different versions of the probe with and without the RF insert (6) 
 for the X channel. In (A) the X channel can be tuned to different nuclei by exchanging 6. 
 However, in (B) the circuitry of the RF insert (6) is integrated on the PCB plane (5), 
 making the design more compact.
@@ -270,7 +269,7 @@ to grow cells on the device.}
 \label{fig:device} 
 \end{figure}
 
-The double resnance circuit is based on the design shown in figure~\ref{fig:circuit}. 
+The double resnance circuit is based on the design shown in \fig{fig:circuit}. 
 %The size of the constriction was larger compared to~\cite{gream_2016} to allow use of larger 
 %sample volumes for some cases. 
 The transmission line detector is tuned to the desired proton 
@@ -284,18 +283,16 @@ The lower frequency channel is connected to the detector through a high-frequenc
 Tuning is achieved by $L_1$ and $C_4$, which are both located on the exchangeable insert, in combination with
 the complex admittance of the detector at the X channel frequency.
 To maximise efficiency, $L_1$ should have as high a $Q$-factor as possible. We have
-used commercially available flat copper coils of 8 mm diameter and 3.5 turns \todo{check values} in the case of 
+used commercially available flat copper coils of 5 mm diameter and 4.5 turns in the case of 
 \textsuperscript{15}N at 60 MHz. Tuning to \textsuperscript{13}C, either at 125 or at 150 MHz 
 could be achieved without $L_1$. 
 
 
 \begin{figure}
 \centering
-\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
+\includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
 \caption{Circuit diagram of the double resonance probe. 
 Proton frequency is fed in from the left (port 2) and X frequency is fed in from right (port 7).
-\todo{modify figure to represent connections to detector structure properly, and include PCB microstrip
-transmission line}
 }
 \label{fig:circuit}
 \end{figure}
@@ -334,9 +331,9 @@ was done by trial and error using an Agilent FieldFox 4 GHz network analyser.
 PCB layouts were designed using KiCAD, and then sent to
 beta-layout GmbH (Aarbergen, Germany) and P.W. Circuits Ltd.~(Wigston, UK) 
 for manufacturing. Easily and inexpensively available FR4 PCB material
-(\fig{fig:ProbePhoto} A) proved adequate for some purposes, but limited resolution to about 10 Hz.
+(\fig{fig:ProbePhoto}(A)) proved adequate for some purposes, but limited resolution to about 10 Hz.
 A high-quality Teflon-based RF PCB material (RO3035, Rogers Corp., USA) was therefore used for optimal 
-performance in both sensitivity and resolution (\fig{fig:ProbePhoto} B).
+performance in both sensitivity and resolution (\fig{fig:ProbePhoto}(B)).
 The probe skeleton was assembled from prefabricated aluminium tubes with the  precision-machined scaffold
 disks using brass screws. Semi-rigid transmission lines were then threaded through the tubes, and the TMPCB plate was 
 soldered on top. The detector planes (3 and 5) and the PMMA spacer between them were assembled using short bits
@@ -345,7 +342,7 @@ of 0.5~mm magnet wire, which were soldered to the appropriate pads in the four c
 NMR experiments were performed on a Varian VNMRS console attached to a Varian 600 ultra shield 14.1 T magnet.  
 Imaging experiments were performed on Bruker AVANCE III spectrometer on a Bruker Active Shield II wide bore 11.7 T 
 magnet. 
-Sodium acetate and $^{15}$N labeled urea were purchased from Merek \todo{Address?} and Dulbecco Modified Eagle's Medium (DMEM) supplemented was purchased from Life Technologies, USA.\par
+Sodium acetate and $^{15}$N labeled urea were purchased from sigma-aldrich,UK and Dulbecco Modified Eagle's Medium (DMEM) supplemented was purchased from Life Technologies, USA.\par
 
 Precision-cut murine liver slices (PCLS) were obtained by first extracting a tissue core of 8 mm diameter 
 using a biopsy punch. PCLS of 250-300 $\mu$m thickness were cut from the core using a Krumdieck Tissue slicer, 
@@ -390,7 +387,7 @@ at the X frequency as well. As already explained, the X channel tuning frequency
 Experimental tuning and matching curves measured at 600 MHz, 500 MHz, 
 60 MHz (\textsuperscript{15}N frequency at 14 T) and 125 MHz (\textsuperscript{13}C frequency at  and 11.7 T). 
 Probe can be tuned to 2 frequencies at a time, above results were measured in 
-pairs of 600 MHz with 60 MHz and 500 MHz with125 MHz. Decoupling can be performed at all the 
+pairs of 600 MHz with 60 MHz and 500 MHz with 125 MHz. Decoupling can be performed at all the 
 frequencies as the channel separation is better than 15 decibels at all frequencies.}
 \label{fig:tandm} 
 \end{figure}
@@ -409,7 +406,7 @@ once the design has been validated.
 ratio of more than 90\%. The probe generates 100~kHz nutation frequency from 100~W input power both at 
 600~MHz and 500~MHz, corresponding to RF field efficiency ($B_{1}/\sqrt{power}$) of 10 kHz/$\sqrt{W}$. 
 The detector geometry has been optimised for a sample volume of 5~$\mu$l. It compares reasonably well to
-the value of 22 kHz/$\sqrt{W}$ that has been reported by Finch et al.\todo{REF} for single-frequency detector 
+the value of 22 kHz/$\sqrt{W}$ that has been reported by Finch et al.~\cite{gream_2016} for single-frequency detector 
 of half this size at a Larmor frequency of 300~MHz. 
 
 The probe is not sensitive enough to make direct detection of $^{15}$N signals practical. Nutation at the
@@ -428,9 +425,7 @@ No signs of arcing were obseved at this power level for pulses up to 1~ms durati
 \begin{figure}
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-sp-150218-15-Nnutation-171215-003.png} 
-\caption{$^{15}$N nutation detected on proton of $^{15}$N-urea dissolved in water acquired at 14 T corresponding to 60 MHz frequency. A radio-frequency field of 6~kHz can be generated at 60~MHz.
-\todo{fix typo in the x-axis label}
-}
+\caption{$^{15}$N nutation detected on proton of $^{15}$N-urea dissolved in water acquired at 14 T corresponding to 60 MHz frequency. A radio-frequency field of 6~kHz can be generated at 60~MHz.}
 \label{fig:15N-nutation} 
 \end{figure}
 
@@ -456,10 +451,10 @@ smaller detector by Finch et al.~\cite{gream_2016}
 
 Even though the resolution of the proton spectra still needs to be improved, it is sufficient to analyse
 complex mixtures. The proton spectrum of DMEM (Dulbecco modified Eagle's medium) cell growth medium acquired with 256 
-scans in 20 mins is shown in figure~\ref{fig:media-spec}. This demonstrates the suitability of this probe 
+scans in 20 mins is shown in \fig{fig:media-spec}. This demonstrates the suitability of this probe 
 for metabolomic studies of microfluidic cultures of cells, tissues, and small organisms. 
 
-Figure~\ref{fig:HSQC} demonstrates proton-detected double resonance experiments in the current setup. 
+\fig{fig:HSQC} demonstrates proton-detected double resonance experiments in the current setup. 
 The left panel shows a $^{13}$C-$^{1}$H heteronuclear single quantum correlation (HSQC) spectrum, acquired in 12 mins 
 (32 t$_1$ increments and 16 scans) 
 from a 2.5 $\mu$l sample of 100 mM u-$^{13}$C-glucose dissolved in water. The right panel shows a 
@@ -491,27 +486,27 @@ avoid image distortions due to eddy currents in the sleeve.
 \fig{fig:tisli} shows MR images of mouse liver tissue slice 
 immersed in DMEM cell growth medium.
 The slice was placed in a microfluidic device with circular sample chamber centred at the detector location, as 
-shown in \fig{fig:tisli}A. 
-The image shown in \fig{fig:tisli}B was acquired using a gradient echo (FLASH) pulse sequence with repetion time
+shown in \fig{fig:tisli}(A). 
+The image shown in \fig{fig:tisli}(B) was acquired using a gradient echo (FLASH) pulse sequence with repetion time
 $t_R=120$~ms and echo time $t_E=12$~ms \todo{verify all values}. The slice thickness of  1~mm encompasses the entire thickness of the tissue; the 
 lateral dimensions of all MR images in \fig{fig:tisli} are 512$\times$512 pixels
 at a resolution of 30~$\mu$m.
-\fig{fig:tisli}C shows a $B_0$ field map, which has been obtained by acquiring
+\fig{fig:tisli}(C) shows a $B_0$ field map, which has been obtained by acquiring
 two separate FLASH images with echo times $t_E=6$~ms and 12~ms, respectively.
 The brightness of each pixel is prootional to the sum of the magnitude of
 the two images, whereas the colour encode the phase difference bewteen them.
 The full colour range from red to blue spans phase differences from $-\pi$ to
 $+\pi$, corresponding to local field variations of $\Delta B/B_0=...$ 
 \todo{compute value and insert here}.
-A spin echo image is shown in \fig{fig:tisli}D, acquired over 25~min. Finally,
-\fig{fig:tisli}E shows a RARE image using the same parameters, with 8 echos
+A spin echo image is shown in \fig{fig:tisli}(D), acquired over 25~min. Finally,
+\fig{fig:tisli}(E) shows a RARE image using the same parameters, with 8 echos
 acquired per scan, thus reducing the acquisition time to 8 minutes.
 
 
 \begin{figure}
 \centering
 \includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tisli-im-180511.png} 
-\caption{MR images of a freshly cut live slice from a mouse. A: optical micrograph; B: Gradient echo image acquired in 1 minute; C: magnetic field map; D Spin echo image acquired in 30 minutes; E: RARE8 image acquired in 8 minutes.}
+\caption{MR images of a freshly cut live slice from a mouse. A: optical micrograph; B: Gradient echo image acquired in 1 minute; C: magnetic field map; D: Spin echo image acquired in 30 minutes; E: RARE8 image acquired in 8 minutes.}
 \label{fig:tisli} 
 \end{figure}
 
@@ -534,7 +529,7 @@ Using simple microfluidic devices made from PMMA sheets by laser cutting,
 spectral resolution around 0.005~ppm is achieved in proton spectra at 
 600~MHz. This is sufficient for primary metabolic studies, but some
 applications could benefit from better resolution. The probe has already been 
-used for various  experiments including reaction monitoring  \todo{REF}, 
+used for various  experiments including reaction monitoring~\cite{Fang-2018}, 
 micro-imaging of mouse liver tissue slices, and metabolic studies of 
 mammalian cells. The probe is designed for double resonance, and
 acqusition of proton-detected heteronuclear correlation experiments
