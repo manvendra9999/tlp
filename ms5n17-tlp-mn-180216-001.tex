@@ -137,6 +137,13 @@ protein NMR spectroscopy, and micro-imaging.
 %\end{itemize}
 \begin{figure}
 \centering
+\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-190205-rf-device-assembly.png} 
+\caption{(A) Orientation of the device with respect to the constriction on the detector (PCB plane 5 is hidden). (B) Exploded view of the rf assembly with the device. }
+\label{fig:rf-device-assembly} 
+\end{figure}
+
+\begin{figure}
+\centering
 \includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181218-probe.png} 
 \caption{The probe with and without sleeve.}
 \label{fig:probe} 
@@ -150,17 +157,16 @@ manufacturers or machined in-house if mechanical workshop facilities are availab
 
 \begin{figure}
 \centering
-\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
+\includegraphics[width=.6\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
 \caption{Exploded view of the probe design (left) and assembled probe (right). 
-Probe base (blue) and scaffold assembly (green) with TMPCB (brown, 8) provides a 
+Probe base (blue) and scaffold assembly (green) with TMPCB (brown, 7) provides a 
 generic mounting point for the NMR detector assembly (red). 
 A microfluidic device (1) can be inserted from the top of the probe. 
 The device is held in place by a spacer (4) between the detector planes (3 and 5) 
-ensuring alignment of the sample chamber with the sensitive area on the PCB planes. 
-The X channel frequency is controlled by a 
-modular PCB insert (6). The modular NMR detector is made up of parts 3 to 6 and is 
-connected to the TMPCB (8) through standard coaxial (SMP) connectors. 
-The scaffold assembly is made up of aluminium tubes (11), scaffold support disks (10) 
+ensuring alignment of the sample chamber with the sensitive area on the PCB planes.
+The modular NMR detector is made up of parts 3,4 and, 5 and is 
+connected to the TMPCB (7) through standard coaxial (SMP) connectors. 
+The scaffold assembly is made up of aluminium tubes (11), scaffold support disks (9) 
 and, auxiliary support disks (12).}
 \label{fig:probe-explode} 
 \end{figure}
@@ -175,32 +181,31 @@ These BNC connectors are connected to semi-rigid coaxial cables for
 RF transport in the probe.
 
 The scaffold assembly is made up of two hollow aluminium tubes (11) held together with 
-precision machined parts at both ends (scaffold support disks (10)). 
+precision machined parts at both ends (scaffold support disks (9)). 
 The semi-rigid cables are  threaded through these hollow aluminium tubes 
 to reach the detector assembly. 
 Auxiliary support disks (12) provide additional rigidity for the scaffold assembly. 
 In our case, these were laser cut from 5~mm thick PMMA sheets, 
 but they may also be made by conventional machining.
-A tuning and matching PCB (TMPCB, 8) is held in place on the top of the probe skeleton by
-the detector support rods (9), with the semi-rigid coaxial cables providing
+A tuning and matching PCB (TMPCB, 7) is held in place on the top of the probe skeleton by
+the detector support rods (8), with the semi-rigid coaxial cables providing
 additional support.
 The TMPCB is permantly fixed to the probe base, and serves as attachment point
 for the exchangeable detector assembly. It also provides 
-capacitors (7) for secondary tuning and matching of the detector.
+capacitors (6) for secondary tuning and matching of the detector.
 The detector assembly is connected to the TMPCB through a pair of
 low-loss SMP connectors (14 in \fig{fig:ProbePhoto}).
 While each detector assembly is roughly
 tuned and matched with fixed circuit elements soldered onto it,
 the adjustable capacitors on the TMPCB are used for 
 fine tuning and matching 
-at the magnet through tuning rods (13) which reach all the way to the probe base. 
+at the magnet through tuning rods (10) which reach all the way to the probe base. 
 
 The base, the scaffold assembly and the tuning and matching PCB all have a free circular 
 axial bore providing access from the bottom of the probe, which can be used for 
 temperature and environmental control and/or fluidic connections to the sample as
 needed.
-The detector assembly is made up of two PCBs (3 and 5), a spacer between them (4) and an 
-RF-insert (6). The detector used here is based on a planar transmission line geometry 
+The detector assembly is made up of two PCBs (3 and 5), a spacer between them (4). The detector used here is based on a planar transmission line geometry 
 as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
 coils and Helmholtz pairs are also possible, and can easily be realised on a PCB.
 The transmission line detector consists of a pair of copper 
@@ -235,15 +240,15 @@ microfluidic sample sizes, and different combinations of target nuclei.
 \begin{figure}
 \centering
 \includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-both-detectors.png}
-\caption{Dual channel probes with (A) and without (B) modular RF insert (6) for X channel. 
+\caption{Dual channel probes with (A) and without (B) modular RF insert (13) for X channel. 
 O.D. of A is 44.45 mm and B is 38 mm. Circuit elements of X channel are integrated on the 
 PCB in B making it compact. Detachable SMP connectors (14) are used to 
-connect the RF insert (6) and the detector assembly.}
+connect the RF insert (13) and the detector assembly.}
 \label{fig:ProbePhoto}
 \end{figure}
-\fig{fig:ProbePhoto} shows two different versions of the probe with and without the RF insert (6) 
-for the X channel. In (A) the X channel can be tuned to different nuclei by exchanging 6. 
-However, in (B) the circuitry of the RF insert (6) is integrated on the PCB plane (5), 
+\fig{fig:ProbePhoto} shows two different versions of the probe with and without the RF insert (13) 
+for the X channel. In (A) the X channel can be tuned to different nuclei by exchanging 13. 
+However, in (B) the circuitry of the RF insert (13) is integrated on the PCB plane (5), 
 making the design more compact.
  Probe (A) is compatible with a Varian 600 Premium shielded 14.1 T magnet, with an outer diameter (O.D.) of 44.45 mm including the sheath. Probe (B), with an 
 O.D. of 38 mm including the sheath, is designed to fit inside a 
