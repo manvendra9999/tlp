@@ -123,10 +123,10 @@ $^{31}$P. The probe skeleton is made almost entirely from easily obtainable raw 
 such as aluminium profiles of standard size, with only a small number of
 custom-machined parts holding the structure together.
 Detailed construction drawings and a complete set of CAD files is
-available for download at \cite{github-probe-download-2019}.
+available for download at \url{https://github.com/marcel-utz/modular-microfluidic-probe}.
 The planar geometry of the detector accommodates exchangeable microfluidic devices
 which can be designed freely for specific experimental requirements as long as the
-overall shape of the device is maintained.
+overall shape of the device is maintained. \fig{fig:rf-device-assembly} shows the microfluidic device and the detector with their relative orientation.
 
 In the remainder of this paper, we discuss the probe design in more detail,
 and characterise its performance in terms of sensitivity and resolution.
@@ -151,17 +151,17 @@ protein NMR spectroscopy, and micro-imaging.
 %\end{itemize}
 \begin{figure}
 \centering
-\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-190205-rf-device-assembly.png} 
-\caption{(A) Orientation of the device with respect to the constriction on the detector (PCB plane 5 is hidden). (B) Exploded view of the rf assembly with the device. }
-\label{fig:rf-device-assembly} 
+\includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-190205-rf-device-assembly.png} 
+\caption{Drawings of the detector assembly and the microfluidic device (1) in (A) front view and, (B) exploded view. Spacer (4) ensures the alignment of the sample chamber with the constrictions on the PCB planes. In (A), PCB plane 5 is hidden to show the orientation of 1 with respect to PCB plane 3.}
+\label{fig:rf-device-assembly}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181218-probe.png}
-\caption{The probe with and without sleeve.}
-\label{fig:probe}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181218-probe.png}
+%\caption{The probe with and without sleeve.}
+%\label{fig:probe}
+%\end{figure}
 The probe assembly design is based on readily and easily available materials and parts
 with minimal need for customised fabrication.
 All mechanical and electronic components are readily available from commercial sources,
@@ -171,7 +171,7 @@ manufacturers or machined in-house if mechanical workshop facilities are availab
 
 \begin{figure}
 \centering
-\includegraphics[width=.6\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
+\includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png} 
 \caption{Exploded view of the probe design (left) and assembled probe (right). 
 Probe base (blue) and scaffold assembly (green) with TMPCB (brown, 7) provides a 
 generic mounting point for the NMR detector assembly (red). 
@@ -186,7 +186,7 @@ and, auxiliary support disks (12).}
 \end{figure}
 
 The probe is composed of three main assemblies: A) probe base; B) scaffold assembly;
-C) detector assembly (\fig{fig:probe}).
+C) detector assembly (\fig{fig:probe-explode}).
 The  base (blue in \fig{fig:probe-explode}) and the scaffold assembly
 (green in \fig{fig:probe-explode}) together make the skeleton of the probe.
 Both the base and scaffold assembly are made from standard aluminium profiles.
@@ -218,11 +218,7 @@ at the magnet through tuning rods (10) which reach all the way to the probe base
 The base, the scaffold assembly and the tuning and matching PCB all have a free circular
 axial bore providing access from the bottom of the probe, which can be used for
 temperature and environmental control and/or fluidic connections to the sample as
-needed.
-
-The detector assembly is made up of two PCBs (3 and 5), a spacer between them (4). The detector used here is based on a planar transmission line geometry 
-
-as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
+needed. The detector assembly is made up of two PCBs (3 and 5), a spacer between them (4). The detector used here is based on a planar transmission line geometry as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
 coils and Helmholtz pairs are also possible, and can easily be realised on a PCB.
 The transmission line detector consists of a pair of copper
 planes, each with a constriction at the centre.  This geometry gives rise to an
@@ -302,7 +298,7 @@ vicinity of 50$\Omega$. A short microstrip
 with a specific impedance of 50$\Omega$
 on the PCB then provides a connection to the secondary tuning and matching elements on the TMPCB ($C_1$ and $C_2$).
 The lower frequency channel is connected to the detector through a high-frequency band reject ($C_7$, $L_7$).
-Tuning is achieved by $L_1$ and $C_4$, which are both located on the exchangeable insert, in combination with
+Tuning is achieved by $L_1$ and $C_4$, which are both located on the exchangeable insert (13), in combination with
 the complex admittance of the detector at the X channel frequency.
 To maximise efficiency, $L_1$ should have as high a $Q$-factor as possible. We have
 used commercially available flat copper coils of 5 mm diameter and 4.5 turns in the case of
@@ -420,7 +416,8 @@ channel separation is better than -15dB at all operating frequencies.
 frequencies at a time, above results were measured in pairs of 600 MHz with 60
 MHz and 500 MHz with 125 MHz. Decoupling can be performed at all the frequencies
 as the channel separation is better than 15 decibels at all frequencies.}
-\label{fig:tandm} \end{figure} Initially, FR4 PCB material was used for the
+\label{fig:tandm} \end{figure}
+Initially, FR4 PCB material was used for the
 detector assembly because of its low cost and easy availability. Inhomogeneities
 in the B$_0$ field due to the glass fibre rovings in FR4's composite backing can
 be seen as fringes in~\fig{fig:field map} (A). B$_{0}$ field maps of the sample
@@ -431,14 +428,14 @@ brightness of each pixel is proportional to the sum of the magnitude of the two
 images, whereas the colour encode the phase difference between them. The full
 colour range from red to blue spans phase differences from $-\pi$ to $+\pi$.
 
-To avoid the inhomogeneities of FR4 and therefore to achieve better resolution,
-detectors were made from RO3035 material. While RO3035 provides better
+B$_{0}$ field map of RO3035 PCB material clearly show better B$_{0}$ field homogeneity compare to FR4. To avoid the inhomogeneities in FR4 and therefore to achieve better resolution,
+detectors were made from RO3035. While RO3035 provides better
 resolution, it is more expensive and takes longer to obtain compared to FR4. It
 therefore makes sense to first prototype new detector designs in FR4, and only
 use the more expensive RO3035 once the design has been validated.
 
 \begin{figure} \centering
-\includegraphics[width=.9\linewidth,keepaspectratio=true]{./figures/pcb-fieldmap-colorbar.png}
+\includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/pcb-fieldmap-colorbar.png}
 \caption{B\textsubscript{0} field map of the sample chamber for FR4 (A) and
 Rogers RO3035 (B) PCB material. Both the field maps were constructed from 2
 gradient echo images acquired on a chip filled with 130 mM sodium acetate
@@ -552,8 +549,7 @@ RARE image using the same parameters, with 8 echos acquired per scan, thus
 reducing the acquisition time to 8 minutes. A spin echo image is shown in
 \fig{fig:tisli}(D), acquired over 25~min. Finally, \fig{fig:tisli}(E) shows a
 $B_0$ field map, which has been obtained by acquiring two separate FLASH images
-with echo times $t_E=5.3$~ms and 15.3~ms, respectively. , corresponding to local
-field variations of $\Delta B/B_0=...$ \todo{compute value and insert here}.
+with echo times $t_E=5.3$~ms and 15.3~ms, respectively.
 
 
 \begin{figure}
