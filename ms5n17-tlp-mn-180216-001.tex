@@ -1,5 +1,5 @@
 \documentclass[preprint,5p]{elsarticle}
-\usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,lineno}
+\usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,lineno,changebar}
 %\linenumbers
 \hypersetup{
     colorlinks=true,        % false: boxed links; true: colored links
@@ -103,8 +103,8 @@ planar~\cite{Maguire2007,dieter2008,EHRMANN200}, or stripline
 detectors~\cite{stripline_jan}. Significant research has gone into developing
 micro-NMR detectors for flow probes, where the sample container takes the form
 of a fixed capillary into which the sample must be injected. Only a few designs
-that allow insertion of a removable microfluidic device into the detector have
-been described~\cite{Spengler-2014,Spengler-2016,gream_2016}.
+that allow insertion of a removable microfluidic device into the detector have \cbstart
+been described~\cite{Spengler-2014,Spengler-2016,gream_2016,swyer2019digital}. \cbend
 
 In this paper we present a novel modular probe designed for generic
 microfluidic-NMR experiments. The design is based on a transmission line
@@ -149,13 +149,14 @@ protein NMR spectroscopy, and micro-imaging.
 %	\item Transmission line connection between tuning/matching of 1H channel and resonator (Smith chart argument)
 %	\item 38 mm bore (Bruker NB) and 45 mm bore (Varian/Agilent NB)
 %\end{itemize}
+\cbstart
 \begin{figure}
 \centering
 \includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-190205-rf-device-assembly.png}
-\caption{Drawings of the detector assembly and the microfluidic device (1). A: front view; B: exploded view. Spacer (4) ensures the alignment of the sample chamber with the constrictions on the PCB planes. In A, PCB plane 5 is hidden to show the orientation of 1 with respect to PCB plane 3.}
+\caption{Drawings of the detector assembly and the microfluidic device (1). A: front view; B: exploded view. Spacer (4) ensures the alignment of the sample chamber with the constrictions on the PCB planes. In A, PCB plane 5 is hidden to show the orientation of 1 with respect to PCB plane 3. Thickness of each of the PCB planes is 1.52 mm and the copper layers on the PCBs is 35 $\mu$m. Both the microfluidic device and the spacer are made from PMMA and have thickness of 0.9 mm and 1 mm respectively.}
 \label{fig:rf-device-assembly}
 \end{figure}
-
+\cbend
 %\begin{figure}
 %\centering
 %\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181218-probe.png}
@@ -195,20 +196,20 @@ These BNC connectors are connected to semi-rigid coaxial cables for
 RF transport in the probe.
 
 The scaffold assembly is made up of two hollow aluminium tubes (11) held together with
-precision machined parts at both ends (scaffold support disks (9)).
-The semi-rigid cables are  threaded through these hollow aluminium tubes
-to reach the detector assembly.
+precision machined parts at both ends (scaffold support disks (9)).\cbstart
+The semi-rigid cables (RG 402) are  threaded through these hollow aluminium tubes
+to reach the detector assembly.\cbend
 Auxiliary support disks (12) provide additional rigidity for the scaffold assembly.
-In our case, these were laser cut from 5~mm thick PMMA sheets,
+In our case, these were laser cut from 5~mm thick poly(methyl methacrylate) (PMMA) sheets,
 but they may also be made by conventional machining.
 A tuning and matching PCB (TMPCB, 7) is held in place on the top of the probe skeleton by
 the detector support rods (8), with the semi-rigid coaxial cables providing
 additional support.
-The TMPCB is permantly fixed to the probe base, and serves as attachment point
-for the exchangeable detector assembly. It also provides
-capacitors (6) for secondary tuning and matching of the detector.
-The detector assembly is connected to the TMPCB through a pair of
-low-loss SMP connectors (14 in \fig{fig:ProbePhoto}).
+The TMPCB is permanently fixed to the probe base, and serves as attachment point
+for the exchangeable detector assembly. \cbstart It also provides
+trimmer capacitors (6) for secondary tuning and matching of the detector.\cbend
+ The detector assembly is connected to the TMPCB through a pair of
+low-loss SMP connectors (14 in \fig{fig:ProbePhoto}). \cbstart SMP Connector Receptacle Male Pin is soldered on the TMPCB and SMP Connector Jack Male Pin is soldered on the PCB plane 3. The TMPCB and 3 are connected by a coaxial connector SMP plug adapter.\cbend
 While each detector assembly is roughly
 tuned and matched with fixed circuit elements soldered onto it,
 the adjustable capacitors on the TMPCB are used for
@@ -218,7 +219,7 @@ at the magnet through tuning rods (10) which reach all the way to the probe base
 The base, the scaffold assembly and the tuning and matching PCB all have a free circular
 axial bore providing access from the bottom of the probe, which can be used for
 temperature and environmental control and/or fluidic connections to the sample as
-needed. The detector assembly is made up of two PCBs (3 and 5), a spacer between them (4). The detector used here is based on a planar transmission line geometry as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
+needed. The detector assembly is made up of two PCBs (3 and 5) and a spacer (4) between them. \cbstart The spacer is made from a 1 mm thick PMMA sheet.\cbend  The detector used here is based on a planar transmission line geometry as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
 coils and Helmholtz pairs are also possible, and can easily be realised on a PCB.
 The transmission line detector consists of a pair of copper
 planes, each with a constriction at the centre.  This geometry gives rise to an
@@ -238,8 +239,8 @@ and the scaffold assembly with screws.
 An exchangeable microfluidic device (1) can be inserted from the top of the detector.
 Microfluidic devices can be used as passive sample holders, filled before putting them
 into the probe,
-or the device can be actively perfused and operated in-situ.
-The microfluidic device is held in place by the spacer
+or the device can be actively perfused and operated in-situ.\cbstart The device inlet and outlet are sealed by an optical adhesive film when using the device as passive sample holder.\cbend
+ The microfluidic device is held in place by the spacer
 between the two PCB planes coinciding the sample chamber with the constriction on the
 detector.  The 45-degree edges of the device outline help with precise and reliable
 alignment.
@@ -274,22 +275,40 @@ Briefly, the devices consist of a 0.5~mm thick middle layer between a  top and
 bottom layer of 0.2~mm thickness each. The sample chamber and fluidic network
 are cut into the middle layer. The fluidic network on the device can be designed
 freely as long as the overall shape of the device is preserved, and the location
-of the sample chamber is maintained. The volume of the sample chamber is 2.5~$\mu$l which can be increased or decreased according to the experimental requirments.
-
+of the sample chamber is maintained. The volume of the sample chamber is 2.5~$\mu$l which can be increased or decreased according to the experimental requirements. \cbstart \fig{fig:device} shows various microfluidic devices.\cbend
+\cbstart
+\begin{table}[h]
+\centering
+\caption{Magnetic susceptibility values of the materials used in the probe\cite{wapler-2014,schenck-1996}}
+\label{tab:susceptibility}
+\begin{tabular}{||p{.3\linewidth}|p{.3\linewidth}||}
+\hline
+Material   & $\frac{\chi/PPM}{\rho/(g cm^{-3})}$	\\
+\hline
+PMMA		&-7.609(5)	\\
+Copper	&-9.63	\\
+FR4	&-1.918(9)		\\
+Aluminium	&20.7	\\
+\hline
+\end{tabular}
+\end{table}
+\cbend
+\cbstart
 \begin{figure}
 \centering
-\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-devices.png}
+\includegraphics[width=\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-devices.png}
 \caption{Microfluidic devices for different applications compatible with the current setup.
 From left: Devices for perfusion of tissue slice on a chip, peristaltic pumping to induce flow,
 hydrogenation on a chip, droplet generator, simple design to fill the sample chamber and,
 to grow cells on the device.}
 \label{fig:device}
 \end{figure}
+\cbend
 
-The double resnance circuit is based on the design shown in \fig{fig:circuit}.
+\cbstart The double resonance circuit is based on the design shown in \fig{fig:circuit}.\cbend
 %The size of the constriction was larger compared to~\cite{gream_2016} to allow use of larger
 %sample volumes for some cases.
-The transmission line detector is tuned to the desired proton
+ The transmission line detector is tuned to the desired proton
 Larmor frequency by chip capacitors located at its four corners,
 as well as a non-magnetic trimmer capacitor ($C_6$). Two primary
 matching capacitors ($C_5$ and $C_5'$) bring the impedance into the
@@ -303,16 +322,38 @@ To maximise efficiency, $L_1$ should have as high a $Q$-factor as possible. We h
 used commercially available flat copper coils of 5 mm diameter and 4.5 turns in the case of
 \textsuperscript{15}N at 60 MHz. Tuning to \textsuperscript{13}C, either at 125 or at 150 MHz
 could be achieved without $L_1$.
-
-
+\cbstart
+\begin{table}[h]
+\centering
+\caption{Details of the circuit elements}
+\label{tab:circut}
+\begin{tabular}{||p{.3\linewidth}|p{.3\linewidth}|p{.3\linewidth}||}
+\hline
+Circuit element   & Value	&Part Number\\
+\hline
+$C_1$, $C_2$ and, $C_8$		&1-23 pf	& NMAM25HV\\
+$C_9$	&3-23 pf	& NMNT23-6\\
+$C_3$, $C_7$	&4.3 pf		& S111TUE\\
+$C_4$	&82 pf	& S111TUE\\
+$C_5$, $C^{'}_{5}$	&2.4	& S111TUE\\
+$L_3$, $L_7$	 &16.6 nH	& 17NGLB\\
+$L_1$	&100 nH	& 4.7\\
+$C_6$	&3-23 pf	& NMAJ25HV\\
+$C_{20}$  & 2.4 pf		& S111TUE\\
+\hline
+\end{tabular}
+\end{table}
+\cbend
+\cbstart
 \begin{figure}
 \centering
-\includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
+\includegraphics[width=.96\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
 \caption{Circuit diagram of the double resonance probe.
 Proton frequency is fed in from the left (port 2) and X frequency is fed in from right (port 7).
 }
 \label{fig:circuit}
 \end{figure}
+\cbend
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 %\begin{itemize}
@@ -333,7 +374,7 @@ Dassault Syst\`{e}mes). Prefabricated profiles made from 6061-T3 aluminium
 (base platform, scaffold tubes, sleeve). A few customised precision-machined
 parts (scaffold support disks, top disk) were obtained from ProtoLabs (Telford,
 UK) after providing CAD files. A small number parts were machined in-house
-(detector support rods, auxiliary support disks). All  electronic components
+(detector support rods, auxiliary support disks). All electronic components
 including semi-rigid transmission lines were purchased from DigiKey Ltd. Cell
 cast PMMA sheets for microfluidic devices were bought from Weatherall Equipment
 (Wendover, UK). Microfluidic devices were designed on AutoCAD. PMMA sheets were
@@ -357,7 +398,7 @@ assembled from prefabricated aluminium tubes held with the precision-machined
 scaffold disks using brass screws. Semi-rigid transmission lines were then
 threaded through the tubes, and the TMPCB plate was soldered on top. The
 detector planes (3 and 5) and the PMMA spacer between them were assembled using
-short bits of 0.5~mm magnet wire, which were soldered to the appropriate pads in
+short bits of 0.5~mm \cbstart diameter copper wire, \cbend which were soldered to the appropriate pads in
 the four corners of the detector structure.
 
 NMR experiments were performed on a Varian VNMRS console attached to a Varian
@@ -373,6 +414,26 @@ thickness were cut from the core using a Krumdieck Tissue slicer, and then
 reduced to 3~mm diameter using a smaller punch. The slices were incubated in
 well-plates at 37$^\circ$C and 80\% O\textsubscript{2}, 5\% CO\textsubscript{2}
 for 2 hours before imaging.
+
+\cbstart
+\fig{fig:field map} were created through having echo times ($t_{e}$) of 6 and 16 ms and repetition time ($t_{r}$) of 100 ms. \fig{fig:1H-nutation} of the water peak in an aqueous solution of 100~mM $^{15}$N-urea. \fig{fig:lineshape} shows proton spectrum of 2.5 $\mu$l of 130 mM  sodium acetate dissolved in H$_2$O acquired at 600 MHz. The spectrum was acquired with water presaturation at 100~Hz. 32 transients were averaged with a repetition delay of 3~s. The proton spectrum of DMEM (Dulbecco
+modified Eagle's medium) cell growth medium acquired with 256 scans in 20 mins
+is shown in \fig{fig:media-spec}.
+The left panel shows a $^{13}$C-$^{1}$H heteronuclear single
+quantum correlation (HSQC) spectrum, acquired in 12 mins (32 t$_1$ increments
+and 16 scans) from a 2.5 $\mu$l sample of 100 mM $^{13}$C-glucose dissolved in
+water. The right panel shows a $^{15}$N-$^{1}$H-HSQC spectrum, acquired in 400
+mins (64 t$_1$ increments and 128 scans) from 2.5 $\mu$l sample of 1 mM
+$^{15}$N-ubiquitin (17 $\mu$g) dissolved in 10 mM phosphate buffer at pH 7.
+The image shown in \fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with $t_R=120$~ms
+and $t_E=15.3$~ms. The slice thickness of  1~mm encompasses the entire thickness
+of the tissue \fig{fig:tisli}(C) shows a
+RARE image using the same parameters, with 8 echos acquired per scan, thus
+reducing the acquisition time to 8 minutes. A spin echo image is shown in
+\fig{fig:tisli}(D), acquired over 25~min. Finally, \fig{fig:tisli}(E) shows a
+$B_0$ field map, which has been obtained by acquiring two separate FLASH images
+with echo times $t_E=5.3$~ms and 15.3~ms, respectively.
+\cbend
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -407,21 +468,23 @@ loaded $Q$ factors, determined from the -3dB points of the reflection curves,
 are 42, 49, 32, 36 at 600 MHz, 500 MHz, 125 MHz and, 60 MHz respectively. The
 channel separation is better than -15dB at all operating frequencies.
 
+\cbstart
 \begin{figure} \centering
-\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180710-tandm-sameaxis.png}
+\includegraphics[width=\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180710-tandm-sameaxis.png}
 \caption{ Experimental tuning and matching curves measured at 600 MHz, 500 MHz,
 60 MHz (\textsuperscript{15}N frequency at 14.1 T) and 125 MHz
-(\textsuperscript{13}C frequency at  and 11.7 T). Probe can be tuned to 2
+(\textsuperscript{13}C frequency at 11.7 T). Probe can be tuned to 2
 frequencies at a time, above results were measured in pairs of 600 MHz with 60
 MHz and 500 MHz with 125 MHz. Decoupling can be performed at all the frequencies
 as the channel separation is better than 15 decibels at all frequencies.}
-\label{fig:tandm} \end{figure}
+\label{fig:tandm}
+\end{figure}
+\cbend
 Initially, FR4 PCB material was used for the
 detector assembly because of its low cost and easy availability. Inhomogeneities
 in the B$_0$ field due to the glass fibre rovings in FR4's composite backing can
 be seen as fringes in~\fig{fig:field map} (A). B$_{0}$ field maps of the sample
-chamber were constructed from 2 gradient echo (FLASH) images having echo times
-($t_{e}$) of 6 and 16 ms and repetition time ($t_{r}$) of 100 ms for both FR4
+chamber were constructed from 2 gradient echo (FLASH) images for both FR4
 and RO3035 PCB materials with the same chip~(\fig{fig:field map}). The
 brightness of each pixel is proportional to the sum of the magnitude of the two
 images, whereas the colour encode the phase difference between them. The full
@@ -433,18 +496,19 @@ resolution, it is more expensive and takes longer to obtain compared to FR4. It
 therefore makes sense to first prototype new detector designs in FR4, and only
 use the more expensive RO3035 once the design has been validated.
 
+\cbstart
 \begin{figure} \centering
-\includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/pcb-fieldmap-colorbar.png}
+\includegraphics[width=\linewidth,keepaspectratio=true]{./figures/pcb-fieldmap-colorbar.png}
 \caption{B\textsubscript{0} field map of the sample chamber for FR4 (A) and
-Rogers RO3035 (B) PCB material. Both the field maps were constructed from 2
+Rogers RO3035 (B) PCB material acquired at 11.7 T. Both the field maps were constructed from 2
 gradient echo images acquired on a chip filled with 130 mM sodium acetate
 dissolved in H\textsubscript{2}O through same parameters and pulse sequence.}
 \label{fig:field map}
 \end{figure}
+\cbend
 
 The RF field at proton frequency shows excellent homogeneity, with a
-810$^{\circ}$/90$^{\circ}$ ratio of more than 90\% measured from $^1$H nutation
-of the water peak in an aqueous solution of 100~mM $^{15}$N-urea at 600~MHz. The
+810$^{\circ}$/90$^{\circ}$ ratio of more than 90\% measured from $^1$H nutation at 600~MHz~\fig{fig:1H-nutation}. The
 probe generates 100~kHz nutation frequency from 100~W input power both at
 600~MHz and 500~MHz, corresponding to RF field efficiency ($B_{1}/\sqrt{power}$)
 of 10 kHz/$\sqrt{W}$. The detector geometry has been optimised for a sample
@@ -455,12 +519,14 @@ For X channel, 100~W of input power produces nutation frequencies of 6 kHz for
 $^{15}$N and 14 kHz for $^{13}$C. No signs of arcing were obseved at this power
 level for pulses up to 1~ms duration.
 
-%\begin{figure}
-%\centering
-%\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-sp-150218-1-Hnutation-171216-103.png}
-%\caption{$^1$H nutation acquired for water peak from a sample of 100 mM $^{15}$N-urea dissolved in water measured at 600 MHz. The 810$^{\circ}$/90$^{\circ}$ ratio is more than 90\% at 600~MHz. The 90$^{\circ}$ pulse length is below 2.5 $\mu$ sec corresponding to 100 kHz radio-frequency field for an input power of 100 W. Similar B$_{1}$ efficiency and homogeneity was observed at 500 MHz}
-%\label{fig:1H-nutation}
-%\end{figure}
+\cbstart
+\begin{figure}
+\centering
+\includegraphics[width=.95\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-sp-150218-1-Hnutation-171216-103.png}
+\caption{$^1$H nutation acquired for water peak from a sample of 100 mM $^{15}$N-urea dissolved in water measured at 600 MHz. The 810$^{\circ}$/90$^{\circ}$ ratio is 92\% at 600~MHz. The 90$^{\circ}$ pulse length is below 2.5 $\mu$ sec corresponding to 100 kHz radio-frequency field for an input power of 100 W. Similar B$_{1}$ efficiency and homogeneity was observed at 500 MHz.}
+\label{fig:1H-nutation}
+\end{figure}
+\cbend
 
 %\begin{figure}
 %\centering
@@ -471,24 +537,19 @@ level for pulses up to 1~ms duration.
 
 \begin{figure}
 \centering
-\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/lineshape.png}
+\includegraphics[width=.80\linewidth,keepaspectratio=true]{./figures/lineshape.png}
 \caption{Spectrum of 130 mM sodium acetate dissolved in water acquired in 32 scans with water presaturation. Carbon satellites can be seen in the expanded base of the acetate line. The orange curve shows a lorentzian lineshape with full width at half maximum of 3.35 Hz.}
 \label{fig:lineshape}
 \end{figure}
 
 \begin{figure*}
 \centering
-\includegraphics[width=.7\linewidth,keepaspectratio=true]{./figures/media-180125-005-bigger-font.png}
+\includegraphics[width=\linewidth,keepaspectratio=true]{./figures/media-180125-005-bigger-font.png}
 \caption{Spectrum of culture growth media recorded in 256 scans with water presaturation. The total experimental time was 20 min for 2.5 $\mu$l sample volume.}
 \label{fig:media-spec}
 \end{figure*}
 
-
-\fig{fig:lineshape} shows proton spectrum of 2.5 $\mu$l of 130 mM  sodium
-acetate dissolved in H$_2$O acquired at 600 MHz. The spectrum was acquired with
-water presaturation at 100~Hz. 32 transients were averaged with a repetition
-delay of 3~s. The inset shows an expanded view of the base of the acetate peak.
-Carbon satellites can be seen well above the noise level. The orange curve
+\fig{fig:lineshape} shows the spectrum of sodium acetate. The inset shows an expanded view of the base of the acetate peak. Carbon satellites can be seen well above the noise level. The orange curve
 corresponds to a Lorentzian lineshape with full width at half maximum of 3.35
 Hz, corresponding to 0.0056 ppm. This is very similar to the resolution reported
 by Finch et al. at 300~MHz. While the residual cause of broadening is still
@@ -505,18 +566,13 @@ detector by Finch et al.~\cite{gream_2016}.
 
 Even though the resolution of the proton spectra still needs to be improved, it
 is sufficient to analyse complex mixtures. The proton spectrum of DMEM (Dulbecco
-modified Eagle's medium) cell growth medium acquired with 256 scans in 20 mins
-is shown in \fig{fig:media-spec}. This demonstrates the suitability of this
+modified Eagle's medium) shown in \fig{fig:media-spec} demonstrates the suitability of this
 probe for metabolomic studies of microfluidic cultures of cells, tissues, and
 small organisms.
 
 \fig{fig:HSQC} demonstrates proton-detected double resonance experiments in the
 current setup. The left panel shows a $^{13}$C-$^{1}$H heteronuclear single
-quantum correlation (HSQC) spectrum, acquired in 12 mins (32 t$_1$ increments
-and 16 scans) from a 2.5 $\mu$l sample of 100 mM $^{13}$C-glucose dissolved in
-water. The right panel shows a $^{15}$N-$^{1}$H-HSQC spectrum, acquired in 400
-mins (64 t$_1$ increments and 128 scans) from 2.5 $\mu$l sample of 1 mM
-$^{15}$N-ubiquitin (17 $\mu$g) dissolved in 10 mM phosphate buffer at pH 7. All
+quantum correlation (HSQC) spectrum of $^{13}$C-glucose and the right panel shows a $^{15}$N-$^{1}$H-HSQC spectrum of $^{15}$N-ubiquitin (17 $\mu$g). All
 expected cross peaks are present in the spectrum. The ability to obtain
 meaningful  \textsuperscript{15}N-\textsuperscript{1}H correlation spectra from
 such small samples could prove very useful in the context of proteins that are
@@ -540,21 +596,16 @@ distortions due to eddy currents in the sleeve. \fig{fig:tisli} shows MR images
 of mouse liver tissue slice immersed in DMEM cell growth medium. The slice was
 placed in a microfluidic device with circular sample chamber centred at the
 detector location, as shown in \fig{fig:tisli}(A). The image shown in
-\fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with $t_R=120$~ms
-and $t_E=15.3$~ms. The slice thickness of  1~mm encompasses the entire thickness
-of the tissue; the lateral dimensions of all MR images in \fig{fig:tisli} are
-512$\times$512 pixels at a resolution of 30~$\mu$m. \fig{fig:tisli}(C) shows a
-RARE image using the same parameters, with 8 echos acquired per scan, thus
-reducing the acquisition time to 8 minutes. A spin echo image is shown in
-\fig{fig:tisli}(D), acquired over 25~min. Finally, \fig{fig:tisli}(E) shows a
-$B_0$ field map, which has been obtained by acquiring two separate FLASH images
-with echo times $t_E=5.3$~ms and 15.3~ms, respectively.
+\fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with; the lateral dimensions of all MR images in \fig{fig:tisli} are 512$\times$512 pixels at a resolution of 30~$\mu$m. \fig{fig:tisli}(C) shows a
+RARE image using the same parameters. A spin echo image is shown in
+\fig{fig:tisli}(D). Finally, \fig{fig:tisli}(E) shows a
+$B_0$ field map, which has been obtained by acquiring two separate FLASH images.
 
 
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth,keepaspectratio=true]{./figures/ms5n17-tisli-im-180511.png}
-\caption{MR images of a freshly cut live slice from a mouse. A: optical micrograph; B: Gradient echo image acquired in 1 minute; C: RARE8 image acquired in 8 minutes; D: Spin echo image acquired in 30 minutes; E: magnetic field map.}
+\caption{MR images of a freshly cut liver slice from a mouse. A: optical micrograph; B: Gradient echo image acquired in 1 minute; C: RARE8 image acquired in 8 minutes; D: Spin echo image acquired in 30 minutes; E: magnetic field map.}
 \label{fig:tisli}
 \end{figure}
 
