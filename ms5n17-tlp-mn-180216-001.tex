@@ -101,7 +101,7 @@ literature~\cite{utz2012review,micronmr2014review}. In most cases, these are
 based on micro-solenoid~\cite{SUBRAMANIAN1998,Pines2007},
 planar~\cite{Maguire2007,dieter2008,EHRMANN200}, or stripline
 detectors~\cite{stripline_jan}. Significant research has gone into developing
-micro-NMR detectors for flow probes, where the sample container takes the form
+micro-NMR detectors for flow probes\cbstart~\cite{bas-shim,Montinaro-2018,chen2017high,oosthoek2017continuous,bart2009microfluidic,bart2009optimization,massin2003planar}\cbend, where the sample container takes the form
 of a fixed capillary into which the sample must be injected. Only a few designs
 that allow insertion of a removable microfluidic device into the detector have \cbstart
 been described~\cite{Spengler-2014,Spengler-2016,gream_2016,swyer2019digital}. \cbend
@@ -197,7 +197,7 @@ RF transport in the probe.
 
 The scaffold assembly is made up of two hollow aluminium tubes (11) held together with
 precision machined parts at both ends (scaffold support disks (9)).\cbstart
-The semi-rigid cables (RG 402) are  threaded through these hollow aluminium tubes
+The semi-rigid cables (RG 402, 50~$\Omega$) are  threaded through these hollow aluminium tubes
 to reach the detector assembly.\cbend
 Auxiliary support disks (12) provide additional rigidity for the scaffold assembly.
 In our case, these were laser cut from 5~mm thick poly(methyl methacrylate) (PMMA) sheets,
@@ -209,7 +209,7 @@ The TMPCB is permanently fixed to the probe base, and serves as attachment point
 for the exchangeable detector assembly. \cbstart It also provides
 trimmer capacitors (6) for secondary tuning and matching of the detector.\cbend
  The detector assembly is connected to the TMPCB through a pair of
-low-loss SMP connectors (14 in \fig{fig:ProbePhoto}). \cbstart SMP Connector Receptacle Male Pin is soldered on the TMPCB and SMP Connector Jack Male Pin is soldered on the PCB plane 3. The TMPCB and 3 are connected by a coaxial connector SMP plug adapter.\cbend
+low-loss SMP connectors (14 in \fig{fig:ProbePhoto}). \cbstart SMP Connector Receptacle Male Pin ($J_3$ and $J_4$ in \fig{fig:circuit}) is soldered on the TMPCB and SMP Connector Jack Male Pin is soldered on the PCB plane 3 ($J_1$ and $J_2$ in \fig{fig:circuit}). The TMPCB and 3 are connected by a coaxial connector SMP plug adapter.\cbend
 While each detector assembly is roughly
 tuned and matched with fixed circuit elements soldered onto it,
 the adjustable capacitors on the TMPCB are used for
@@ -270,7 +270,7 @@ Probe (B) also fits inside a Bruker micro-imaging gradient unit. Naturally, B ca
 wide bore magnets with spacers or gradient stack to keep the probe centred.
 
 Microfluidic devices are made from inexpensive PMMA sheets by laser cutting and
-thermal bonding, as described in detail elsewhere \cite{yilmaz_bonding}.
+thermal bonding, as described in detail elsewhere \cite{yilmaz_bonding}. \cbstart Magnetic susceptibility value of PMMA and other materials in given in table~\ref{tab:susceptibility}\cbend
 Briefly, the devices consist of a 0.5~mm thick middle layer between a  top and
 bottom layer of 0.2~mm thickness each. The sample chamber and fluidic network
 are cut into the middle layer. The fluidic network on the device can be designed
@@ -283,11 +283,11 @@ of the sample chamber is maintained. The volume of the sample chamber is 2.5~$\m
 \label{tab:susceptibility}
 \begin{tabular}{||p{.3\linewidth}|p{.3\linewidth}||}
 \hline
-Material   & $\frac{\chi/PPM}{\rho/(g cm^{-3})}$	\\
+Material   & $\chi$/ppm	\\
 \hline
-PMMA		&-7.609(5)	\\
+PMMA		&-9.054	\\
 Copper	&-9.63	\\
-FR4	&-1.918(9)		\\
+FR4	&-3.743		\\
 Aluminium	&20.7	\\
 \hline
 \end{tabular}
@@ -309,7 +309,7 @@ to grow cells on the device.}
 %The size of the constriction was larger compared to~\cite{gream_2016} to allow use of larger
 %sample volumes for some cases.
  The transmission line detector is tuned to the desired proton
-Larmor frequency by chip capacitors located at its four corners,
+Larmor frequency by chip capacitors ($C_{20}$) located at its four corners,
 as well as a non-magnetic trimmer capacitor ($C_6$). Two primary
 matching capacitors ($C_5$ and $C_5'$) bring the impedance into the
 vicinity of 50$\Omega$. A short microstrip
@@ -321,25 +321,26 @@ the complex admittance of the detector at the X channel frequency.
 To maximise efficiency, $L_1$ should have as high a $Q$-factor as possible. We have
 used commercially available flat copper coils of 5 mm diameter and 4.5 turns in the case of
 \textsuperscript{15}N at 60 MHz. Tuning to \textsuperscript{13}C, either at 125 or at 150 MHz
-could be achieved without $L_1$.
-\cbstart
+could be achieved without $L_1$. \cbstart Details of all the circuit elements are given in table~\ref{tab:circuit}.
 \begin{table}[h]
 \centering
-\caption{Details of the circuit elements}
-\label{tab:circut}
-\begin{tabular}{||p{.3\linewidth}|p{.3\linewidth}|p{.3\linewidth}||}
+\caption{Details of the circuit elements to tune the probe at 600 MHz and 60 MHz.}
+\label{tab:circuit}
+\begin{tabular}{||p{.3\linewidth}|p{.2\linewidth}|p{.3\linewidth}||}
 \hline
-Circuit element   & Value	&Part Number\\
+Circuit element   & Value	&Manufacturer Part Number	\\
 \hline
-$C_1$, $C_2$ and, $C_8$		&1-23 pf	& NMAM25HV\\
-$C_9$	&3-23 pf	& NMNT23-6\\
-$C_3$, $C_7$	&4.3 pf		& S111TUE\\
-$C_4$	&82 pf	& S111TUE\\
-$C_5$, $C^{'}_{5}$	&2.4	& S111TUE\\
+$C_1$, $C_2$ and, $C_8$		&1-23 pF	& NMAM25HV\\
+$C_9$	&3-23 pF	& NMNT23-6\\
+$C_6$	&3-23 pF	& NMAJ25HV\\
+$C_{20}$  & 2.4 pF		& S111TUE\\
+$C_3$, $C_7$	&4.3 pF		& S111TUE\\
+$C_4$	&82 pF	& S111TUE\\
+$C_5$, $C^{'}_{5}$	&2.4 pF	& S111TUE\\
+$L_1$	&111 nH	& 1010VS-111ME\\
 $L_3$, $L_7$	 &16.6 nH	& 17NGLB\\
-$L_1$	&100 nH	& 4.7\\
-$C_6$	&3-23 pf	& NMAJ25HV\\
-$C_{20}$  & 2.4 pf		& S111TUE\\
+$J_1$, $J_2$ & -&0734153591\\
+$J_3$, $J_4$ & -&SMP-MSLD-PCT-5\\
 \hline
 \end{tabular}
 \end{table}
@@ -347,9 +348,8 @@ $C_{20}$  & 2.4 pf		& S111TUE\\
 \cbstart
 \begin{figure}
 \centering
-\includegraphics[width=.96\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
-\caption{Circuit diagram of the double resonance probe.
-Proton frequency is fed in from the left (port 2) and X frequency is fed in from right (port 7).
+\includegraphics[width=\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
+\caption{Circuit diagram of the double resonance probe. The background colour relates the different circuit elements on different PCBs. The back side of the PCB plane 5 and the front side of the PCB plane 3 is shown in horizontal orientation. The front side of the TMPCB 7 is shown in vertical orientation. Trimmer capacitor $C_6$ is placed on the back side of PCB plane 5. The copper layer is shown in brown and the solder pads to place the circuit elements are shown in off-white. An insulating solder mask layer over the copper layer prevents accidental short-circuiting. 
 }
 \label{fig:circuit}
 \end{figure}
@@ -375,8 +375,7 @@ Dassault Syst\`{e}mes). Prefabricated profiles made from 6061-T3 aluminium
 parts (scaffold support disks, top disk) were obtained from ProtoLabs (Telford,
 UK) after providing CAD files. A small number parts were machined in-house
 (detector support rods, auxiliary support disks). All electronic components
-including semi-rigid transmission lines were purchased from DigiKey Ltd. Cell
-cast PMMA sheets for microfluidic devices were bought from Weatherall Equipment
+including semi-rigid transmission lines were purchased from DigiKey Ltd \cbstart and Farnell element14, UK. Sodium acetate and $^{15}$N labeled urea were purchased from sigma-aldrich, UK and Dulbecco Modified Eagle's Medium (DMEM) supplemented was purchased from Life Technologies, USA.\cbend Cell cast PMMA sheets for microfluidic devices were bought from Weatherall Equipment
 (Wendover, UK). Microfluidic devices were designed on AutoCAD. PMMA sheets were
 cut to desired size and functionality (holes or channels) using a laser
 engraving system  (HPC Laser L3040), and then bonded using the protocol
@@ -398,36 +397,26 @@ assembled from prefabricated aluminium tubes held with the precision-machined
 scaffold disks using brass screws. Semi-rigid transmission lines were then
 threaded through the tubes, and the TMPCB plate was soldered on top. The
 detector planes (3 and 5) and the PMMA spacer between them were assembled using
-short bits of 0.5~mm \cbstart diameter copper wire, \cbend which were soldered to the appropriate pads in
-the four corners of the detector structure.
-
-NMR experiments were performed on a Varian VNMRS console attached to a Varian
-600 premium shielded 14.1 T magnet. Imaging experiments were performed on Bruker
-AVANCE III spectrometer on a Bruker Active Shield II wide bore 11.7 T magnet.
-Sodium acetate and $^{15}$N labeled urea were purchased from sigma-aldrich, UK
-and Dulbecco Modified Eagle's Medium (DMEM) supplemented was purchased from Life
-Technologies, USA.
-
-Precision-cut murine liver slices (PCLS) were obtained by first extracting a
-tissue core of 8 mm diameter using a biopsy punch. PCLS of 250-300 $\mu$m
-thickness were cut from the core using a Krumdieck Tissue slicer, and then
-reduced to 3~mm diameter using a smaller punch. The slices were incubated in
-well-plates at 37$^\circ$C and 80\% O\textsubscript{2}, 5\% CO\textsubscript{2}
-for 2 hours before imaging.
+short bits of 0.5~mm \cbstart diameter copper wire bought from RS components, UK, \cbend which were soldered to the appropriate pads in the four corners of the detector structure.
 
 \cbstart
-\fig{fig:field map} were created through having echo times ($t_{e}$) of 6 and 16 ms and repetition time ($t_{r}$) of 100 ms. \fig{fig:1H-nutation} of the water peak in an aqueous solution of 100~mM $^{15}$N-urea. \fig{fig:lineshape} shows proton spectrum of 2.5 $\mu$l of 130 mM  sodium acetate dissolved in H$_2$O acquired at 600 MHz. The spectrum was acquired with water presaturation at 100~Hz. 32 transients were averaged with a repetition delay of 3~s. The proton spectrum of DMEM (Dulbecco
-modified Eagle's medium) cell growth medium acquired with 256 scans in 20 mins
-is shown in \fig{fig:media-spec}.
-The left panel shows a $^{13}$C-$^{1}$H heteronuclear single
+\subsection{Details of NMR and MRI measurements}
+NMR experiments were performed on a Varian VNMRS console attached to a Varian 600 premium shielded 14.1 T magnet. Field maps in the \fig{fig:field map} were created by gradient echo (FLASH) pulse sequence with echo times ($t_{e}$) of 6 and 16 ms and repetition time ($t_{r}$) of 100 ms on a sample of 130 mM  sodium acetate dissolved in H$_2$O. The peak shown in the \fig{fig:1H-nutation} is of H$_2$O in an aqueous solution of 100~mM $^{15}$N-urea. \fig{fig:lineshape} shows proton spectrum of the acetate resonance from 2.5 $\mu$l of 130 mM  sodium acetate dissolved in H$_2$O. The spectrum was recorded after presturating the water signal with rf-field of 100~Hz. 32 transients were averaged with a repetition delay of 3~s. The proton spectrum of DMEM (Dulbecco
+modified Eagle's medium) cell growth medium in \fig{fig:media-spec} was acquired with 256 scans in 20 mins.
+The left panel of \fig{fig:HSQC} shows a $^{13}$C-$^{1}$H heteronuclear single
 quantum correlation (HSQC) spectrum, acquired in 12 mins (32 t$_1$ increments
 and 16 scans) from a 2.5 $\mu$l sample of 100 mM $^{13}$C-glucose dissolved in
 water. The right panel shows a $^{15}$N-$^{1}$H-HSQC spectrum, acquired in 400
 mins (64 t$_1$ increments and 128 scans) from 2.5 $\mu$l sample of 1 mM
 $^{15}$N-ubiquitin (17 $\mu$g) dissolved in 10 mM phosphate buffer at pH 7.
-The image shown in \fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with $t_R=120$~ms
-and $t_E=15.3$~ms. The slice thickness of  1~mm encompasses the entire thickness
-of the tissue \fig{fig:tisli}(C) shows a
+
+For MRI experiments precision-cut murine liver slices (PCLS) were obtained by first extracting a
+tissue core of 8 mm diameter using a biopsy punch. PCLS of 250-300 $\mu$m
+thickness were cut from the core using a Krumdieck Tissue slicer, and then
+reduced to 3~mm diameter using a smaller punch. The slices were incubated in
+well-plates at 37$^\circ$C and 80\% O\textsubscript{2}, 5\% CO\textsubscript{2}
+for 2 hours before imaging. Imaging experiments were performed on Bruker
+AVANCE III spectrometer on a Bruker Active Shield II wide bore 11.7 T magnet. The image shown in \fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with $t_R=120$~ms and $t_E=15.3$~ms. The slice thickness of  1~mm encompasses the entire thickness of the tissue \fig{fig:tisli}(C) shows a
 RARE image using the same parameters, with 8 echos acquired per scan, thus
 reducing the acquisition time to 8 minutes. A spin echo image is shown in
 \fig{fig:tisli}(D), acquired over 25~min. Finally, \fig{fig:tisli}(E) shows a
@@ -483,13 +472,13 @@ as the channel separation is better than 15 decibels at all frequencies.}
 Initially, FR4 PCB material was used for the
 detector assembly because of its low cost and easy availability. Inhomogeneities
 in the B$_0$ field due to the glass fibre rovings in FR4's composite backing can
-be seen as fringes in~\fig{fig:field map} (A). B$_{0}$ field maps of the sample
+be seen as fringes in~\fig{fig:field map} (A). \cbdelete B$_{0}$ field maps of the sample
 chamber were constructed from 2 gradient echo (FLASH) images for both FR4
 and RO3035 PCB materials with the same chip~(\fig{fig:field map}). The
 brightness of each pixel is proportional to the sum of the magnitude of the two
 images, whereas the colour encode the phase difference between them. The full
 colour range from red to blue spans phase differences from $-\pi$ to $+\pi$.
-
+\cbdelete
 B$_{0}$ field map of RO3035 PCB material clearly show better B$_{0}$ field homogeneity compare to FR4. To avoid the inhomogeneities in FR4 and therefore to achieve better resolution,
 detectors were made from RO3035. While RO3035 provides better
 resolution, it is more expensive and takes longer to obtain compared to FR4. It
@@ -506,9 +495,9 @@ dissolved in H\textsubscript{2}O through same parameters and pulse sequence.}
 \label{fig:field map}
 \end{figure}
 \cbend
-
+\cbdelete 
 The RF field at proton frequency shows excellent homogeneity, with a
-810$^{\circ}$/90$^{\circ}$ ratio of more than 90\% measured from $^1$H nutation at 600~MHz~\fig{fig:1H-nutation}. The
+810$^{\circ}$/90$^{\circ}$ ratio of more than 90\% measured from $^1$H nutation at 600~MHz shown in~\fig{fig:1H-nutation}. The
 probe generates 100~kHz nutation frequency from 100~W input power both at
 600~MHz and 500~MHz, corresponding to RF field efficiency ($B_{1}/\sqrt{power}$)
 of 10 kHz/$\sqrt{W}$. The detector geometry has been optimised for a sample
@@ -542,14 +531,14 @@ level for pulses up to 1~ms duration.
 \label{fig:lineshape}
 \end{figure}
 
-\begin{figure*}
+\begin{figure}
 \centering
 \includegraphics[width=\linewidth,keepaspectratio=true]{./figures/media-180125-005-bigger-font.png}
 \caption{Spectrum of culture growth media recorded in 256 scans with water presaturation. The total experimental time was 20 min for 2.5 $\mu$l sample volume.}
 \label{fig:media-spec}
-\end{figure*}
-
-\fig{fig:lineshape} shows the spectrum of sodium acetate. The inset shows an expanded view of the base of the acetate peak. Carbon satellites can be seen well above the noise level. The orange curve
+\end{figure}
+\cbdelete 
+\fig{fig:lineshape} shows the proton spectrum of sodium acetate. The inset shows an expanded view of the base of the acetate peak. Carbon satellites can be seen well above the noise level. The orange curve
 corresponds to a Lorentzian lineshape with full width at half maximum of 3.35
 Hz, corresponding to 0.0056 ppm. This is very similar to the resolution reported
 by Finch et al. at 300~MHz. While the residual cause of broadening is still
@@ -565,11 +554,11 @@ detector by Finch et al.~\cite{gream_2016}.
 
 
 Even though the resolution of the proton spectra still needs to be improved, it
-is sufficient to analyse complex mixtures. The proton spectrum of DMEM (Dulbecco
+is sufficient to analyse complex mixtures. \cbdelete The proton spectrum of DMEM (Dulbecco
 modified Eagle's medium) shown in \fig{fig:media-spec} demonstrates the suitability of this
 probe for metabolomic studies of microfluidic cultures of cells, tissues, and
 small organisms.
-
+\cbdelete 
 \fig{fig:HSQC} demonstrates proton-detected double resonance experiments in the
 current setup. The left panel shows a $^{13}$C-$^{1}$H heteronuclear single
 quantum correlation (HSQC) spectrum of $^{13}$C-glucose and the right panel shows a $^{15}$N-$^{1}$H-HSQC spectrum of $^{15}$N-ubiquitin (17 $\mu$g). All
@@ -589,10 +578,11 @@ $^1$H-$^{15}$N HSQC of $^{15}$N labeled Ubiquitin (right) both acquired from
 minutes from a 100 mM sample. Ubiquitin HSQC spectrum was acquired in 400
 minutes from a 1 mM sample.} \label{fig:HSQC} \end{figure}
 %$
+\cbdelete
 The probe can also be used to acquire micro magnetic resonance (MR) images using
 a Bruker micro-gradient unit. To this effect, the aluminium probe sleeve must be
 replaced by an electrically insulating material in order to avoid image
-distortions due to eddy currents in the sleeve. \fig{fig:tisli} shows MR images
+distortions due to eddy currents in the sleeve.\cbstart In the current experiments a shorter aluminium tube with 3D printed top part to match the probe height was used.\cbend  \fig{fig:tisli} shows MR images
 of mouse liver tissue slice immersed in DMEM cell growth medium. The slice was
 placed in a microfluidic device with circular sample chamber centred at the
 detector location, as shown in \fig{fig:tisli}(A). The image shown in
