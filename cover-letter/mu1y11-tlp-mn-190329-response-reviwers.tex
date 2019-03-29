@@ -1,0 +1,163 @@
+\documentclass{mu-soton-letter}
+\usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,lineno}
+%\linenumbers
+\hypersetup{
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,         % color of internal links (change box color with linkbordercolor)    https://www.sharelatex.com/learn/Hyperlinks
+    citecolor=black,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=black           % color of external links
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{reviewer}{\begin{quote}\color{50!black}}{\end{quote}}
+
+\signature{Marcel}
+
+\begin{document}
+\begin{letter}{Prof. Lucio Frydman\\
+  Editor,\\
+  Journal of Magnetic Resonance\\[2cm]
+  \textbf{Revised Manuscript on a Modular Microfluidic NMR Probe System}}
+\vfill
+\opening{Dear Lucio,
+}
+Please find enclosed our revised manuscript titled
+``Modular transmission line probes for microfluidic nuclear
+magnetic resonance spectroscopy and imaging'', which we submit for publication
+in the Journal of Magnetic Resonance.
+
+We are grateful to the reviewers for their careful evaluation of the manuscript
+and for their constructive comments. We have responded to their specific concerns
+as detailed below:
+
+
+\textbf{Reviewer 1}
+
+\begin{reviewer}
+  The submitted manuscript reports on a dual-channel modular probe assembly for NMR spectroscopy and imaging on microliter samples.
+  The reported probe is an ''improved'' version of the one reported by the same authors in JMR in 2016 (Ref. 25).
+  These improvements are:
+  1)Dual channel (1H/15N or 1H/13C) instead of single channel (1H).
+  2)Simplified fabrication and assembly of the probe parts, with significantly improved "versatility".
+
+  General comment:
+  The work presented in this manuscript deserve to be published. However, since it is a purely "technical" work, I would like to see the "technical content" described in more details.
+  I think that the authors idea to have the drawings and the CAD files of the probe stored in a "open access" website is certainly good. However, I would like to see many more details of the probe design directly in the manuscript text, drawings, schematics, and figure captions.
+\end{reviewer}
+
+
+Values of all the circuit elements have been assembled in a table. The circuit diagram has been expanded to show the positioning of the circuit elements on the different PCBs. }
+
+
+
+Detailed comments:
+
+1) PAGE 1:  I would definitely add more relevant literature on "microfluidic NMR probes" such as:
+
+-Swyer, Ian, et al. "Digital microfluidics and nuclear magnetic resonance spectroscopy for in situ diffusion measurements and reaction monitoring" Lab on a Chip 19, 641 (2019).
+
+Added in removable device
+
+-van Meerten, S. G. J., P. Jan M. van Bentum, and Arno PM Kentgens. "Shim-on-Chip Design for Microfluidic NMR Detectors." Analytical chemistry 90, 10134(2018)
+
+Added in flow probe
+
+-Montinaro, E., et al. "3D printed microchannels for sub-nL NMR spectroscopy." PloS one 13, e0192780 (2018).
+
+Added in flow probe
+
+-Chen, Ying, et al. "High-resolution microstrip NMR detectors for subnanoliter samples." Physical Chemistry Chemical Physics 19, 28163 (2017).
+
+Added in flow probe
+
+-Oosthoek-de Vries, Anna Jo, et al. "Continuous flow 1H and 13C NMR spectroscopy in microfluidic stripline NMR chips." Analytical Chemistry 89,  2296 (2017).
+
+Added in flow probe
+
+-Bart, J., et al. "A microfluidic high-resolution NMR flow probe." Journal of the American Chemical Society 131, 5014 (2009)
+
+Added in flow probe
+
+-Bart, J., et al. "Optimization of stripline-based microfluidic chips for high-resolution NMR." Journal of magnetic resonance 201, 175 (2009).
+
+Added in flow probe
+
+-Massin, C., et al. "Planar microcoil-based microfluidic NMR probes." Journal of Magnetic Resonance 164, 242 (2003).
+
+Added in flow probe
+
+Response: All of the suggested references are added in the introduction. Only the first article by Swyer, Ian, et al. describes a functional and exchangeable microfluidic device, rest of the references are added in the microfluidic flow probes for NMR.
+
+
+2) FIGURE 1: Add in the caption the thickness of each "layer" (PCBs, spacer, microfluid device). Specify also the thickness of the Cu layers on the PCBs (this might be relevant for the spectral resolution due to a different thickness of the "air layers" in close proximity to the sample). Some of these dimensions are reported in the text but it would be nice to have all dimensions also in this figure caption.
+
+Response: All the details are added in the figure caption.
+
+3) FIGURE 1: From the drawings it seems to me that the Al spacer is short-circuiting the transmission line. Please clarify this point.
+
+Response: The spacer is made of PMMA, hence it is non-conducting. In the caption of figure 5 it is added that an insulating solder mask layer on the copper prevents accidental short-circuiting.
+
+4) PAGE 2, LINE 32, RIGHT: Indicated which specific semi-rigid coaxial cables are used.
+
+Response: RG 402, 50 Ohm added to the text.
+
+5) PAGE 2, LINE 48, RIGHT: Indicated which specific capacitors are used.
+
+Response: The values and the manufacturer part number of all the circuit elements are added in table 2.
+
+6) PAGE 2, LINE 50, RIGHT: Indicated which specific connectors are used (in the probe base as well as in the probe PCB).
+
+Response: All the details are added in the text.
+
+7) PAGE 3, LINE 30, LEFT: For the case in which the microfluidic device is used as "passive sample holder", how the microfluidic device is sealed?
+
+Response: By an optical adhesive film, added in the text.
+
+
+8) PAGE 3, LINE 58, LEFT: It would be useful for the reader to add the approximate values for the magnetic susceptibility of as many as possible probe materials (in order of importance: PMMA, Cu, RO3035, FR4, Al).
+
+Response: suseptibilties are added in table 1.
+
+9) PAGE 3, LINE 48, RIGHT: Typo "resnance".
+
+Response: Resonance is corrected in the text.
+
+10) FIGURE 4: I would make this figure bigger for clarity (scale it up to full column width).
+
+Response:  The figure is increased to full column width.
+
+11) FIGURE 5: Add a detailed picture and/or drawing of the tuning&matching PCB (the TMPCB in the authors notation), give the position on the PCB of all the components (capacitors, variable capacitors, and inductors), and give all values (and model and manufacturer, particularly for the inductors and the variable capacitors) of these components. Increase the font size (it is too small).
+
+Response: The picture of TMPCB and detector PCB 3 and 5 are added. Details of all the circuit elements are added in the table 2.
+
+12) PAGE 4, LINE 6, RIGHT: It is not clear to me the meaning of "0.5 mm magnet wire".
+
+Response: copper wire of diameter 0.5 mm.
+
+13) FIGURE 6: I would scale up the figure to full column width. The font size is a bit too small. In the caption there is a typo ("at and").
+
+Response: The figure is scaled up with bigger fonts
+
+14) FIGURE 7: Is it really true that the FR4 gives a worse spectral resolution with respect to R03035 because of "glass fibre rovings" as mentioned at PAGE 4, LINE 51, RIGHT ? Is the thickness of the Cu layer the same on both substrates ? Is the magnetic susceptibility of the two material similar ? The R03035 has significantly lower tensile modulus with respect to FR4. I wonder if this might help in having a better "mechanical fit" in the mounting, which might reduce the presence of "air voids".
+
+Response: The resolution is directly related to the B0 field homogeneity. The field maps of the two materials under the same conditions show the fringes observed in the FR4 material. These fringes are caused by glass fiber rovings which can be seen optically. Magnetic susceptibility of the two materials is different, but the materials are more than 0.1 mm far from the sample and hence will have minimal effect on the B0 field. The mechanical fit is similar in both the designs as the chip is inserted without resistance in both the cases. The air voids are expected to be of the volume in both the designs as the spacer is same.
+
+15) FIGURE 7: Add a drawing or picture of the "constriction" (with scale bar or, even better, indicated dimensions) where we can see the width of the constriction, the length of the constriction, and the width of the gap between the constriction and the "external" metal.
+
+Response: The constriction drawing with dimensions is added in the figure 5.
+
+16) PAGE 6, LINE 59, LEFT: Specify the material used as replacement of Al for the sleeve in the imaging experiments?
+
+Response: Shorter aluminium tube with 3D printed part on top to match the probe height was used.
+
+
+
+
+
+\closing{With best wishes,}
+
+\end{letter}
+
+\end{document}
