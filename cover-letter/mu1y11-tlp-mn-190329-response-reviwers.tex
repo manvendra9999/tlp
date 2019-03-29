@@ -1,3 +1,4 @@
+% !TEX program = pdflatex
 \documentclass{mu-soton-letter}
 \usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,lineno}
 %\linenumbers
@@ -30,21 +31,22 @@ in the Journal of Magnetic Resonance.
 
 We are grateful to the reviewers for their careful evaluation of the manuscript
 and for their constructive comments. We have responded to their specific concerns
-as detailed below:
+as follows:
 
 
 \textbf{Reviewer 1}
 
-\textcolor{black!50}
-{\emph{The submitted manuscript reports on a dual-channel modular probe assembly for NMR spectroscopy and imaging on microliter samples.
+%\textcolor{black!50}
+\begin{reviewer}
+{The submitted manuscript reports on a dual-channel modular probe assembly for NMR spectroscopy and imaging on microliter samples.
   The reported probe is an ''improved'' version of the one reported by the same authors in JMR in 2016 (Ref. 25).
   These improvements are:
   1)Dual channel (1H/15N or 1H/13C) instead of single channel (1H).
-  2)Simplified fabrication and assembly of the probe parts, with significantly improved "versatility".}}
+  2)Simplified fabrication and assembly of the probe parts, with significantly improved "versatility".}
 
-\textcolor{black!50}{ \textbf{General comment:}}
- 
-  \begin{reviewer}
+  \textcolor{black!50}{ \textbf{General comment:}}
+
+
   The work presented in this manuscript deserve to be published. However, since it is a purely "technical" work, I would like to see the "technical content" described in more details.
   I think that the authors idea to have the drawings and the CAD files of the probe stored in a "open access" website is certainly good. However, I would like to see many more details of the probe design directly in the manuscript text, drawings, schematics, and figure captions.
 \end{reviewer}
@@ -53,55 +55,54 @@ as detailed below:
 Values of all the circuit elements have been assembled in a table. The circuit diagram has been expanded to show the positioning of the circuit elements on the different PCBs.
 
 
-
-\textcolor{black!50}{ \textbf{Detailed comments:}}
-
 \begin{reviewer}
+\textbf{Detailed comments:}
 1) PAGE 1:  I would definitely add more relevant literature on "microfluidic NMR probes" such as:
-\end{reviewer}
 -Swyer, Ian, et al. "Digital microfluidics and nuclear magnetic resonance spectroscopy for in situ diffusion measurements and reaction monitoring" Lab on a Chip 19, 641 (2019).
 
-Added in removable device
+%Added in removable device
 
 -van Meerten, S. G. J., P. Jan M. van Bentum, and Arno PM Kentgens. "Shim-on-Chip Design for Microfluidic NMR Detectors." Analytical chemistry 90, 10134(2018)
 
-Added in flow probe
+%Added in flow probe
 
 -Montinaro, E., et al. "3D printed microchannels for sub-nL NMR spectroscopy." PloS one 13, e0192780 (2018).
 
-Added in flow probe
+%Added in flow probe
 
 -Chen, Ying, et al. "High-resolution microstrip NMR detectors for subnanoliter samples." Physical Chemistry Chemical Physics 19, 28163 (2017).
 
-Added in flow probe
+%Added in flow probe
 
 -Oosthoek-de Vries, Anna Jo, et al. "Continuous flow 1H and 13C NMR spectroscopy in microfluidic stripline NMR chips." Analytical Chemistry 89,  2296 (2017).
 
-Added in flow probe
+%Added in flow probe
 
 -Bart, J., et al. "A microfluidic high-resolution NMR flow probe." Journal of the American Chemical Society 131, 5014 (2009)
 
-Added in flow probe
+%Added in flow probe
 
 -Bart, J., et al. "Optimization of stripline-based microfluidic chips for high-resolution NMR." Journal of magnetic resonance 201, 175 (2009).
 
-Added in flow probe
+%Added in flow probe
 
 -Massin, C., et al. "Planar microcoil-based microfluidic NMR probes." Journal of Magnetic Resonance 164, 242 (2003).
 
-Added in flow probe
-
-All of the suggested references are added in the introduction. Only the first article by Swyer, Ian, et al. describes a functional and exchangeable microfluidic device, rest of the references are added in the microfluidic flow probes for NMR.
+%Added in flow probe
+\end{reviewer}
+All of the suggested references have been added to the introduction.
 
 \begin{reviewer}
 2) FIGURE 1: Add in the caption the thickness of each "layer" (PCBs, spacer, microfluid device). Specify also the thickness of the Cu layers on the PCBs (this might be relevant for the spectral resolution due to a different thickness of the "air layers" in close proximity to the sample). Some of these dimensions are reported in the text but it would be nice to have all dimensions also in this figure caption.
 \end{reviewer}
-All the details are added in the figure caption.
+All the details have been added to the figure caption.
 
 \begin{reviewer}
 3) FIGURE 1: From the drawings it seems to me that the Al spacer is short-circuiting the transmission line. Please clarify this point.
 \end{reviewer}
-The spacer is made of PMMA, hence it is non-conducting. In the caption of figure 5 it is added that an insulating solder mask layer on the copper prevents accidental short-circuiting.
+The spacer is made of PMMA, hence it is non-conducting. This is pointed out
+clearly in the revised manuscript. Also, the caption of figure 5 now points out
+that an insulating solder mask layer on the copper prevents accidental short-circuiting.
 \begin{reviewer}
 4) PAGE 2, LINE 32, RIGHT: Indicated which specific semi-rigid coaxial cables are used.
 \end{reviewer}
@@ -109,27 +110,28 @@ RG 402, 50 Ohm added to the text.
 \begin{reviewer}
 5) PAGE 2, LINE 48, RIGHT: Indicated which specific capacitors are used.
 \end{reviewer}
-The values and the manufacturer part number of all the circuit elements are added in table 2.
+The values and the manufacturer part number of all the circuit elements
+have been added in table 2.
 
 \begin{reviewer}
 6) PAGE 2, LINE 50, RIGHT: Indicated which specific connectors are used (in the probe base as well as in the probe PCB).
 \end{reviewer}
-All the details are added in the text.
+The detailed specficications of the connectors are now provided in the text.
 
 \begin{reviewer}
 7) PAGE 3, LINE 30, LEFT: For the case in which the microfluidic device is used as "passive sample holder", how the microfluidic device is sealed?
 \end{reviewer}
-By an optical adhesive film, added in the text.
+Using an optical adhesive film, as added to the revised manuscript.
 
 \begin{reviewer}
 8) PAGE 3, LINE 58, LEFT: It would be useful for the reader to add the approximate values for the magnetic susceptibility of as many as possible probe materials (in order of importance: PMMA, Cu, RO3035, FR4, Al).
 \end{reviewer}
-Susceptibilities are added in table 1.
+All relevant known susceptibilities are now listed in Table 1.
 
 \begin{reviewer}
 9) PAGE 3, LINE 48, RIGHT: Typo "resnance".
 \end{reviewer}
-Resonance is corrected in the text.
+corrected.
 
 \begin{reviewer}
 10) FIGURE 4: I would make this figure bigger for clarity (scale it up to full column width).
@@ -139,19 +141,32 @@ The figure is increased to full column width.
 \begin{reviewer}
 11) FIGURE 5: Add a detailed picture and/or drawing of the tuning\&matching PCB (the TMPCB in the authors notation), give the position on the PCB of all the components (capacitors, variable capacitors, and inductors), and give all values (and model and manufacturer, particularly for the inductors and the variable capacitors) of these components. Increase the font size (it is too small).
 \end{reviewer}
-The picture of TMPCB and detector PCB 3 and 5 are added. Details of all the circuit elements are added in the table 2.
+Full information on the TMPCB as well as the other two PCB components is now
+included in Figure 5. The relationship between the circuit diagram and the PCB
+layouts is now also indicated clearly, andd etails of all the circuit
+elements are given in Table 2.
 \begin{reviewer}
 12) PAGE 4, LINE 6, RIGHT: It is not clear to me the meaning of "0.5 mm magnet wire".
 \end{reviewer}
-copper wire of diameter 0.5 mm.
+copper wire of diameter 0.5 mm; the text has been corrected accordingly.
 \begin{reviewer}
 13) FIGURE 6: I would scale up the figure to full column width. The font size is a bit too small. In the caption there is a typo ("at and").
 \end{reviewer}
-The figure is scaled up with bigger fonts
+The figure has been scaled up, uses bigger fonts, and the typo has been corrected.
 \begin{reviewer}
 14) FIGURE 7: Is it really true that the FR4 gives a worse spectral resolution with respect to R03035 because of "glass fibre rovings" as mentioned at PAGE 4, LINE 51, RIGHT ? Is the thickness of the Cu layer the same on both substrates ? Is the magnetic susceptibility of the two material similar ? The R03035 has significantly lower tensile modulus with respect to FR4. I wonder if this might help in having a better "mechanical fit" in the mounting, which might reduce the presence of "air voids".
 \end{reviewer}
-The resolution is directly related to the B0 field homogeneity. The field maps of the two materials under the same conditions show the fringes observed in the FR4 material. These fringes are caused by glass fiber rovings which can be seen optically. Magnetic susceptibility of the two materials is different, but the materials are more than 0.1 mm far from the sample and hence will have minimal effect on the B0 field. The mechanical fit is similar in both the designs as the chip is inserted without resistance in both the cases. The air voids are expected to be of the volume in both the designs as the spacer is same.
+The resolution is directly related to the B0 field homogeneity.
+The field maps of the two materials under the same conditions show the fringes
+observed in the FR4 material. These fringes are caused by glass fiber
+rovings which can be seen optically.
+The mechanical fit is similar in both the designs as the chip is inserted
+without resistance in both the cases. The vertical boundaries between the chip and the
+detector planes do not contribute to susceptibility broadening, as they are parallel
+to the magnetic field; therefore the air voids between the chip and the detector
+are not relevant. The Cu layers in both materials are about 35 $\mu$m thick,
+and their horizontal edges (which define the constriction geometry) are unlikely
+to be a dominant factor in the observed line widths.
 \begin{reviewer}
 15) FIGURE 7: Add a drawing or picture of the "constriction" (with scale bar or, even better, indicated dimensions) where we can see the width of the constriction, the length of the constriction, and the width of the gap between the constriction and the "external" metal.
 \end{reviewer}
@@ -159,28 +174,50 @@ The constriction drawing with dimensions is added in the figure 5.
 \begin{reviewer}
 16) PAGE 6, LINE 59, LEFT: Specify the material used as replacement of Al for the sleeve in the imaging experiments?
 \end{reviewer}
-Shorter aluminium tube with 3D printed part on top to match the probe height was used.
+A shorter aluminium housing was used, combined with a 3D printed (ABS plastic)
+housing for the detection part of the probe. This is pointed out clearly in the
+revised manuscript.
 
-
+\clearpage
 \textbf{Reviewer 2}
 
-\textcolor{black!50}{
-\emph{In this manuscript, the authors report the design and construction of a modular NMR probe dedicated to microfluidics applications.  The authors show 1D proton and HSQC spectra as well as images of mouse liver slices acquired with this probe. The proton RF coil design used has been published previously by the same group. This probe design is interesting for the microfluidics community especially since the authors make available all the drawings on github.}}
-
-\textcolor{black!50}{ \textbf{Major comments:}}
-
 \begin{reviewer}
+  {In this manuscript, the authors report the design and construction of a modular NMR probe dedicated to microfluidics applications.  The authors show 1D proton and HSQC spectra as well as images of mouse liver slices acquired with this probe. The proton RF coil design used has been published previously by the same group. This probe design is interesting for the microfluidics community especially since the authors make available all the drawings on github.}
+
+  \textbf{Major comments:}
+
 1.      The authors claim that the RF homogeneity is "excellent", they must show B1 maps to support this claim.  On page 5, in the paragraph starting with "The RF field?" it should be 180/90 and not 810/90.
 \end{reviewer}
-The 1H nutation diagram is added as figure 8. It is indeed 810/90 as can be seen in figure 8.
+In order to document the RF homogeneity, we have added the 1H nutation diagram
+as Figure 8. The quantity referred to by the reviewer is indeed the ratio of the
+amplitudes of signals following a 810$^\circ$ pulse and a 90$^\circ$ pulse, respectively.
+This quanitity is commonly used to quantify RF homogeneity in commercial probes,
+and is often referred to as "810/90 ratio". It is now explained clearly in Figure 8.
 \begin{reviewer}
 2.      Are the B0 maps in Figure 7 acquired at 14T?  Please specify. Please show B0 and B1 maps both at 11.7 and 14.1T.
 \end{reviewer}
-B0 filed maps were acquired in 11.7 T. It is added in the text. B0 field maps can only be acquired at 11.7 T due to the availability of the gradient unit.
+B0 filed maps were acquired in 11.7 T, as now indicated in the text. B0 field maps could
+ only be acquired at 11.7 T, since we do not have a gradient unit available on
+ our 14.1T magnets.
+
+
 \begin{reviewer}
 3.      The images of liver slices are not convincing.  If three different sequences are used the authors should adapt the parameters to obtain meaningful contrast. Please list all the acquisition parameters for the different sequences. In the caption of figure 11, should be "cut liver slices".
 \end{reviewer}
-It must be noted that the images were taken to demonstrate the proof of principle to obtain an MR image of a tissue slice using the current setup. The optimisation of the imaging parameters and the tissue culture are underway to obtain a physiologically relevant dataset. Parameters for different pulse sequences will be added in the methods section.
+As requested, detailed parameters for the different pulse
+sequences have been added to the methods section.
+We agree with the reviewer that the contrast in the images shown could be
+improved. However,
+the images are merely providing a proof
+of principle that the probe is capable to support MR microimaging, and no
+conclusions going beyond this are drawn from this data in the manuscript.
+Optimisation of the parameters for a particular sample class was outside of the
+scope of the work presented here. That said, the images do exhibit some
+structural contrast, and features in the slices can be correlated with the
+optical micrograph. The optimisation of the imaging parameters and the
+tissue culture are currently underway, but will be reported separately.
+
+\clearpage
 \begin{reviewer}
 4.      The Results and Discussion section is a mixture or Results and Experimental parameters (in particular NMR/MRI acquisition parameters). Please move all the experimental parameters into the Methods section under a subsection dedicated to NMR/MRI acquisitions.
 \end{reviewer}
@@ -190,8 +227,13 @@ All the experimental parameters have been moved to a subsection in the methods s
 \begin{reviewer}
 1.      Please reformulate the last sentence on page 1 starting with "The probe is designed".
 \end{reviewer}
-??
+As suggested, we have reformulated the sentence, and connected it with the following one:
+"The probe is optimised for proton detected double resonance, with the
+second channel tunable to different nuclei\ldots"
+\vspace{3cm}
 
+Again, we are grateful to the reviewers for their constructive criticism, and
+we are confident that the above changes adequately address their concerns.
 
 
 \closing{With best wishes,}
