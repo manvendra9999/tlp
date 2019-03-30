@@ -1,6 +1,7 @@
-\documentclass[review]{elsarticle}
+\documentclass[preprint,5p]{elsarticle}
 \usepackage{graphicx,amssymb,amsmath,amstext,hyperref,graphics,float,eurosym,geometry,lineno,changebar}
 %\linenumbers
+%\nochangebars
 \biboptions{sort&compress}
 \hypersetup{
     colorlinks=true,        % false: boxed links; true: colored links
@@ -108,7 +109,7 @@ that allow insertion of a removable microfluidic device into the detector have \
 been described~\cite{Spengler-2014,Spengler-2016,gream_2016,swyer2019digital}.\cbend
 
 In this paper we present a novel modular probe designed for generic
-microfluidic-NMR experiments. The design is based on a transmission line
+microfluidic NMR experiments. The design is based on a transmission line
 detector~\cite{stripline_jan,gream_2016} using inexpensive
 printed circuit board (PCB) technology. A modular design ensures that detectors of
 different geometry and size can be easily exchanged.
@@ -150,14 +151,14 @@ protein NMR spectroscopy, and micro-imaging.
 %	\item Transmission line connection between tuning/matching of 1H channel and resonator (Smith chart argument)
 %	\item 38 mm bore (Bruker NB) and 45 mm bore (Varian/Agilent NB)
 %\end{itemize}
-\cbstart
+\cbstart\
 \begin{figure}
 \centering
 \includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-190205-rf-device-assembly.png}
-\caption{Drawings of the detector assembly and the microfluidic device (1). A: front view; B: exploded view. Spacer (4) ensures the alignment of the sample chamber with the constrictions on the PCB planes. In A, PCB plane 5 is hidden to show the orientation of 1 with respect to PCB plane 3. Thickness of each of the PCB planes is 1.52 mm and the copper layers on the PCBs is 35 $\mu$m. Both the microfluidic device and the spacer are made from PMMA and have thickness of 0.9 mm and 1 mm respectively.}
+\caption{Drawings of the detector assembly and the microfluidic device (1). A: front view (dimensions in mm); B: exploded view. Spacer (4) ensures the alignment of the sample chamber with the constrictions on the PCB planes. In A, PCB plane 5 is hidden to show the orientation of 1 with respect to PCB plane 3. Thickness of each of the PCB planes is 1.52 mm and the copper layers on the PCBs is 35 $\mu$m. Both the microfluidic device and the spacer are made from PMMA and have thickness of 0.9 mm and 1 mm respectively.}
 \label{fig:rf-device-assembly}
 \end{figure}
-\cbend
+\cbend\
 %\begin{figure}
 %\centering
 %\includegraphics[width=.5\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181218-probe.png}
@@ -174,7 +175,7 @@ manufacturers or machined in-house if mechanical workshop facilities are availab
 \begin{figure}
 \centering
 \includegraphics[width=.8\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-181007-Probe-explode.png}
-\caption{Exploded view of the probe design (left) and assembled probe (right).
+\caption{Exploded view of the probe design (left) and assembled probe (center).
 Probe base (blue) and scaffold assembly (green) with TMPCB (brown, 7) provides a
 generic mounting point for the NMR detector assembly (red).
 A microfluidic device (1) can be inserted from the top of the probe.
@@ -197,9 +198,8 @@ These BNC connectors are connected to semi-rigid coaxial cables for
 RF transport in the probe.
 
 The scaffold assembly is made up of two hollow aluminium tubes (11) held together with
-precision machined parts at both ends (scaffold support disks (9)).\cbstart
-The semi-rigid cables (RG 402, 50~$\Omega$) are  threaded through these hollow aluminium tubes
-to reach the detector assembly.\cbend
+precision machined parts at both ends (scaffold support disks (9)).\cbstart\ The semi-rigid cables (RG 402, 50~$\Omega$) are  threaded through these hollow aluminium tubes
+to reach the detector assembly.\cbend\
 Auxiliary support disks (12) provide additional rigidity for the scaffold assembly.
 In our case, these were laser cut from 5~mm thick poly(methyl methacrylate) (PMMA) sheets,
 but they may also be made by conventional machining.
@@ -207,11 +207,9 @@ A tuning and matching PCB (TMPCB, 7) is held in place on the top of the probe sk
 the detector support rods (8), with the semi-rigid coaxial cables providing
 additional support.
 The TMPCB is permanently fixed to the probe base, and serves as attachment point
-for the exchangeable detector assembly. \cbstart\  It also provides
-trimmer capacitors (6) for secondary tuning and matching of the detector.\cbend
- The detector assembly is connected to the TMPCB through a pair of
-low-loss SMP connectors (14 in \fig{fig:ProbePhoto}). \cbstart SMP Connector Receptacle Male Pin ($J_3$ and $J_4$ in \fig{fig:circuit}) is soldered on the TMPCB and SMP Connector Jack Male Pin is soldered on the PCB plane 3 ($J_1$ and $J_2$ in \fig{fig:circuit}). The TMPCB and 3 are connected by a coaxial connector SMP plug adapter.\cbend
-While each detector assembly is roughly
+for the exchangeable detector assembly.\cbstart\ It also provides
+trimmer capacitors (6) for secondary tuning and matching of the detector.\cbend\ The detector assembly is connected to the TMPCB through a pair of
+low-loss SMP connectors (14 in \fig{fig:ProbePhoto}). \cbstart\ The SMP connector receptacle male pin ($J_3$ and $J_4$ in \fig{fig:circuit}) is soldered on the TMPCB and the SMP connector jack male pin is soldered on the PCB plane 3 ($J_1$ and $J_2$ in \fig{fig:circuit}). The TMPCB and 3 are connected by a coaxial connector SMP plug adapter.\cbend\ While each detector assembly is roughly
 tuned and matched with fixed circuit elements soldered onto it,
 the adjustable capacitors on the TMPCB are used for
 fine tuning and matching
@@ -220,7 +218,7 @@ at the magnet through tuning rods (10) which reach all the way to the probe base
 The base, the scaffold assembly and the tuning and matching PCB all have a free circular
 axial bore providing access from the bottom of the probe, which can be used for
 temperature and environmental control and/or fluidic connections to the sample as
-needed. The detector assembly is made up of two PCBs (3 and 5) and a spacer (4) between them. \cbstart The spacer is made from a 1 mm thick PMMA sheet.\cbend  The detector used here is based on a planar transmission line geometry as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
+needed. The detector assembly is made up of two PCBs (3 and 5) and a spacer (4) between them.\cbstart\ The spacer is made from a 1 mm thick PMMA sheet.\cbend\ The detector used here is based on a planar transmission line geometry as described elsewhere~\cite{gream_2016,stripline_jan}; other structures such as spiral
 coils and Helmholtz pairs are also possible, and can easily be realised on a PCB.
 The transmission line detector consists of a pair of copper
 planes, each with a constriction at the centre.  This geometry gives rise to an
@@ -240,11 +238,10 @@ and the scaffold assembly with screws.
 An exchangeable microfluidic device (1) can be inserted from the top of the detector.
 Microfluidic devices can be used as passive sample holders, filled before putting them
 into the probe,
-or the device can be actively perfused and operated in-situ.\cbstart The device inlet and outlet are sealed by an optical adhesive film (MicroAmp, AB Applied Biosystems)
-when using the device as passive sample holder.\cbend
- The microfluidic device is held in place by the spacer
+or the device can be actively perfused and operated in-situ.\cbstart\ The device inlet and outlet are sealed by an optical adhesive film (MicroAmp, AB Applied Biosystems)
+when using the device as passive sample holder.\cbend\ The microfluidic device is held in place by the spacer
 between the two PCB planes coinciding the sample chamber with the constriction on the
-detector.  The 45-degree edges of the device outline help with precise and reliable
+detector. The 45-degree edges of the device outline help with precise and reliable
 alignment.
 Since the detector assembly is attached to the probe base through SMP
 connectors, it can easily be exchanged.
@@ -262,17 +259,17 @@ connect the RF insert (13) and the detector assembly.}
 \label{fig:ProbePhoto}
 \end{figure}
 \fig{fig:ProbePhoto} shows two different versions of the probe with and without the RF insert (13)
-for the X channel. In (A) the X channel can be tuned to different nuclei by exchanging 13.
+for the X channel. In (A) the X channel can be tuned to different nuclei by exchanging (13).
 However, in (B) the circuitry of the RF insert (13) is integrated on the PCB plane (5),
 making the design more compact.
  Probe (A) is compatible with a Varian 600 Premium shielded 14.1 T magnet, with an outer diameter (O.D.) of 44.45 mm including the sheath. Probe (B), with an
 O.D. of 38 mm including the sheath, is designed to fit inside a
 Bruker narrow bore shim stack.
 Probe (B) also fits inside a Bruker micro-imaging gradient unit. Naturally, B can also be used with
-wide bore magnets with spacers or gradient stack to keep the probe centred.
+wide bore magnets with appropriate spacers to keep the probe centered.
 
-Microfluidic devices are made from inexpensive PMMA sheets by laser cutting and
-thermal bonding, as described in detail elsewhere \cite{yilmaz_bonding}. \cbstart Magnetic susceptibility value of PMMA and other materials in given in table~\ref{tab:susceptibility}\cbend
+The microfluidic devices were made from inexpensive PMMA sheets by laser cutting and
+thermal bonding, as described in detail elsewhere \cite{yilmaz_bonding}.\cbstart\ PMMA was chosen for ease of fabrication, but also due to the close match in magnetic susceptibility with that of water (Table~\ref{tab:susceptibility}).\cbend\
 Briefly, the devices consist of a 0.5~mm thick middle layer between a  top and
 bottom layer of 0.2~mm thickness each. The sample chamber and fluidic network
 are cut into the middle layer. The fluidic network on the device can be designed
@@ -281,7 +278,7 @@ of the sample chamber is maintained. The volume of the sample chamber is 2.5~$\m
 \cbstart
 \begin{table}[h]
 \centering
-\caption{Magnetic susceptibility values of the materials used in the probe\cite{wapler-2014,schenck-1996}}
+\caption{Magnetic susceptibility values of some relevant materials.\cite{wapler-2014,schenck-1996}}
 \label{tab:susceptibility}
 \begin{tabular}{||p{.3\linewidth}|p{.3\linewidth}||}
 \hline
@@ -291,6 +288,7 @@ PMMA		&-9.054	\\
 Copper	&-9.63	\\
 FR4	&-3.743		\\
 Aluminium	&20.7	\\
+Water & -9.02\\
 \hline
 \end{tabular}
 \end{table}
@@ -318,7 +316,7 @@ vicinity of 50$\Omega$. A short microstrip
 with a specific impedance of 50$\Omega$
 on the PCB then provides a connection to the secondary tuning and matching elements on the TMPCB ($C_1$ and $C_2$).
 The lower frequency channel is connected to the detector through a high-frequency band reject ($C_7$, $L_7$).
-Tuning is achieved by $L_1$ and $C_4$, which are both located on the exchangeable insert (13), in combination with
+Tuning is achieved by $L_1$ and $C_4$ in combination with
 the complex admittance of the detector at the X channel frequency.
 To maximise efficiency, $L_1$ should have as high a $Q$-factor as possible. We have
 used commercially available flat copper coils of 5 mm diameter and 4.5 turns in the case of
@@ -351,7 +349,7 @@ $J_3$, $J_4$ & -&SMP-MSLD-PCT-5\\
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth,keepaspectratio=true]{./figures/ms5n17-tlp-im-180110-circuit-diagram.png}
-\caption{Circuit diagram of the double resonance probe. The background colour relates the different circuit elements on different PCBs. The back side of the PCB plane 5 and the front side of the PCB plane 3 is shown in horizontal orientation. The front side of the TMPCB 7 is shown in vertical orientation. Trimmer capacitor $C_6$ is placed on the back side of PCB plane 5. The copper layer is shown in brown and the solder pads to place the circuit elements are shown in off-white. An insulating solder mask layer over the copper layer prevents accidental short-circuiting.
+\caption{Circuit diagram of the double resonance probe. The background colour relates the different circuit elements on different PCBs. The back side of the PCB plane 5 and the front side of the PCB plane 3 is shown in horizontal orientation. The front side of the TMPCB 7 is shown in vertical orientation. Trimmer capacitor $C_6$ is placed on the back side of PCB plane 3. The copper layer is shown in brown and the solder pads to place the circuit elements are shown in off-white. An insulating solder mask layer over the copper layer prevents accidental short-circuiting.
 }
 \label{fig:circuit}
 \end{figure}
@@ -377,10 +375,10 @@ Dassault Syst\`{e}mes). Prefabricated profiles made from 6061-T3 aluminium
 parts (scaffold support disks, top disk) were obtained from ProtoLabs (Telford,
 UK) after providing CAD files. A small number parts were machined in-house
 (detector support rods, auxiliary support disks). All electronic components
-including semi-rigid transmission lines were purchased from DigiKey Ltd \cbstart and Farnell element14, UK. Sodium acetate and $^{15}$N labeled urea were purchased from sigma-aldrich, UK and Dulbecco Modified Eagle's Medium (DMEM) supplemented was purchased from Life Technologies, USA.\cbend Cell cast PMMA sheets for microfluidic devices were bought from Weatherall Equipment
+including semi-rigid transmission lines were purchased from DigiKey Ltd\cbstart\ and Farnell element14, UK. Sodium acetate and $^{15}$N labeled urea were purchased from Sigma-Aldrich, UK and Dulbecco Modified Eagle's Medium (DMEM) supplemented was purchased from Life Technologies, USA.\cbend\ Cell cast PMMA sheets for microfluidic devices were bought from Weatherall Equipment
 (Wendover, UK). Microfluidic devices were designed on AutoCAD. PMMA sheets were
 cut to desired size and functionality (holes or channels) using a laser
-engraving system  (HPC Laser L3040), and then bonded using the protocol
+engraving system  (L3040 from HPC Laser LTD, Elland, UK), and then bonded using the protocol
 described in~\cite{yilmaz_bonding}.
 
 The precise dimensions of the detector were optimised for a given sample volume
@@ -395,15 +393,15 @@ manufacturing. Easily and inexpensively available FR4 PCB material
 resolution to about 10 Hz. A high-quality Teflon-based RF PCB material (RO3035,
 Rogers Corp., USA) was therefore used for optimal performance in both
 sensitivity and resolution (\fig{fig:ProbePhoto}(B)). The probe skeleton was
-assembled from prefabricated aluminium tubes held with the precision-machined
+assembled from prefabricated aluminium tubes held together with the precision-machined
 scaffold disks using brass screws. Semi-rigid transmission lines were then
 threaded through the tubes, and the TMPCB plate was soldered on top. The
 detector planes (3 and 5) and the PMMA spacer between them were assembled using
-short bits of 0.5~mm \cbstart diameter copper wire bought from RS components, UK, \cbend which were soldered to the appropriate pads in the four corners of the detector structure.
+short bits of 0.5~mm\cbstart\ diameter copper wire bought from RS components, UK,\cbend\ which were soldered to the appropriate pads in the four corners of the detector structure.
 
 \cbstart
 \subsection{Details of NMR and MRI measurements}
-NMR experiments were performed on a Varian VNMRS console attached to a Varian 600 premium shielded 14.1 T magnet. Field maps in the \fig{fig:field map} were created by gradient echo (FLASH) pulse sequence with echo times ($t_{e}$) of 6 and 16 ms and repetition time ($t_{r}$) of 100 ms on a sample of 130 mM  sodium acetate dissolved in H$_2$O. The peak shown in the \fig{fig:1H-nutation} is of H$_2$O in an aqueous solution of 100~mM $^{15}$N-urea. \fig{fig:lineshape} shows proton spectrum of the acetate resonance from 2.5 $\mu$l of 130 mM  sodium acetate dissolved in H$_2$O. The spectrum was recorded after presturating the water signal with rf-field of 100~Hz. 32 transients were averaged with a repetition delay of 3~s. The proton spectrum of DMEM (Dulbecco
+NMR spectra were obtained on a Varian VNMRS console attached to a Varian 600 premium shielded 14.1 T magnet. Field maps in the \fig{fig:field map} were created by gradient echo (FLASH) pulse sequence with echo times ($t_{e}$) of 6 and 16 ms and repetition time ($t_{r}$) of 100 ms on a sample of 130 mM  sodium acetate dissolved in H$_2$O. The peak shown in the \fig{fig:1H-nutation} is of H$_2$O in an aqueous solution of 100~mM $^{15}$N-urea. \fig{fig:lineshape} shows proton spectrum of 2.5 $\mu$l of 130 mM  sodium acetate dissolved in H$_2$O. The spectrum was recorded after pre-saturating the water signal at a nutation frequency of 100~Hz. 32 transients were averaged with a repetition delay of 3~s. The proton spectrum of DMEM (Dulbecco
 modified Eagle's medium) cell growth medium in \fig{fig:media-spec} was acquired with 256 scans in 20 mins.
 The left panel of \fig{fig:HSQC} shows a $^{13}$C-$^{1}$H heteronuclear single
 quantum correlation (HSQC) spectrum, acquired in 12 mins (32 t$_1$ increments
@@ -417,8 +415,8 @@ tissue core of 8 mm diameter using a biopsy punch. PCLS of 250-300 $\mu$m
 thickness were cut from the core using a Krumdieck Tissue slicer, and then
 reduced to 3~mm diameter using a smaller punch. The slices were incubated in
 well-plates at 37$^\circ$C and 80\% O\textsubscript{2}, 5\% CO\textsubscript{2}
-for 2 hours before imaging. Imaging experiments were performed on Bruker
-AVANCE III spectrometer on a Bruker Active Shield II wide bore 11.7 T magnet. The image shown in \fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with $t_R=120$~ms and $t_E=15.3$~ms. The slice thickness of  1~mm encompasses the entire thickness of the tissue \fig{fig:tisli}(C) shows a
+for 2 hours before imaging. Imaging experiments were performed on a Bruker
+AVANCE III spectrometer on a Bruker Active Shield II wide bore 11.7 T magnet equipped with a Bruker Micro2.5 gradient system. The image shown in \fig{fig:tisli}(B) was acquired using a FLASH pulse sequence with $t_R=120$~ms and $t_E=15.3$~ms. The slice thickness of  1~mm encompasses the entire thickness of the tissue. \fig{fig:tisli}(C) shows a
 RARE image using the same parameters, with 8 echos acquired per scan, thus
 reducing the acquisition time to 8 minutes. A spin echo image is shown in
 \fig{fig:tisli}(D), acquired over 25~min. Finally, \fig{fig:tisli}(E) shows a
@@ -506,7 +504,7 @@ of 10 kHz/$\sqrt{W}$. The detector geometry has been optimised for a sample
 volume of 5~$\mu$l. It compares reasonably well to the value of 22
 kHz/$\sqrt{W}$ that has been reported by Finch et al.~\cite{gream_2016} for
 single-frequency detector of half this size at a Larmor frequency of 300~MHz.
-For X channel, 100~W of input power produces nutation frequencies of 6 kHz for
+For the X channel, 100~W of input power produces nutation frequencies of 6 kHz for
 $^{15}$N and 14 kHz for $^{13}$C. No signs of arcing were obseved at this power
 level for pulses up to 1~ms duration.
 
@@ -549,7 +547,7 @@ of the PMMA microfluidic devices to play a major role. Efforts to mitigate these
 and to achieve more highly resolved proton spectra are currently underway in our
 laboratory and will be reported at a later occasion.  The limit of detection
 $nLOD_{\omega}=\frac{3n\sqrt{{\Delta}t}}{SNR}$ ($n$ is the number of spins and
-$\Delta t$ is 1/linewidth of the observed resonance) is 1.4 nmol s$^{1/2}$ of
+$\Delta t$ is 1/linewidth of the observed resonance) is 1.4 nmol s$^{1/2}$ for
 protons at 600 MHz, slightly better than the value reported for a smaller
 detector by Finch et al.~\cite{gream_2016}.
 
@@ -586,7 +584,7 @@ a Bruker micro-gradient unit. To this effect, the aluminium probe sleeve must be
 replaced by an electrically insulating material in order to avoid image
 distortions due to eddy currents in the sleeve.\cbstart\
 A shorter aluminium tube with 3D printed top part (made from ABS plastic)
-to match the probe height was used.\cbend  \fig{fig:tisli} shows MR images
+to match the probe height was used.\cbend\ \fig{fig:tisli} shows MR images
 of mouse liver tissue slice immersed in DMEM cell growth medium. The slice was
 placed in a microfluidic device with circular sample chamber centred at the
 detector location, as shown in \fig{fig:tisli}(A). The image shown in
